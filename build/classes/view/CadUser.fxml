@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="484.0" prefWidth="507.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="controller.CadUserController">
+  <children>
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#9ec4e8" height="484.0" layoutX="0.0" layoutY="-2.0" opacity="0.45" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="507.0" />
+    <Button id="" fx:id="btvoltar" layoutX="0.0" layoutY="78.0" mnemonicParsing="false" onAction="#onActionVoltarMenu" text="Voltar" />
+    <AnchorPane id="AnchorPane" layoutX="449.0" layoutY="120.0" />
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="52.0" layoutY="26.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="507.0" />
+    <Rectangle arcHeight="5.0" arcWidth="5.0" height="65.0" layoutX="62.0" layoutY="120.0" opacity="0.15" stroke="BLACK" strokeType="INSIDE" width="270.0">
+      <fill>
+        <Color blue="1.000" green="1.000" opacity="0.588" red="1.000" fx:id="x1" />
+      </fill>
+    </Rectangle>
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="$x1" height="65.0" layoutX="29.0" layoutY="312.0" opacity="0.15" stroke="BLACK" strokeType="INSIDE" width="247.0" />
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="$x1" height="91.0" layoutX="55.0" layoutY="203.0" opacity="0.15" stroke="BLACK" strokeType="INSIDE" width="256.0" />
+    <CubicCurve controlX1="-252.9103240966797" controlX2="97.21343231201172" controlY1="-335.16766357421875" controlY2="4.437187194824219" endX="120.66539001464844" endY="-176.70582580566406" fill="#1f93ff41" layoutX="212.0" layoutY="503.0" opacity="0.5" rotate="-90.0" startX="-431.756591796875" startY="-63.776123046875" stroke="BLACK" />
+    <Label layoutX="194.0" layoutY="31.0" text="Usuário" textFill="#2b98bf">
+      <font>
+        <Font name="Comic Sans MS Bold Italic" size="30.0" />
+      </font>
+    </Label>
+    <ImageView fx:id="patavoltar" fitHeight="88.0" fitWidth="88.0" layoutX="6.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true" rotate="-99.5">
+      <image>
+        <Image url="@IMAGENS/logopata.png" />
+      </image>
+    </ImageView>
+    <TextField fx:id="tfnome" layoutX="119.0" layoutY="154.0" prefHeight="25.0" prefWidth="207.0" />
+    <TextField fx:id="tfCpfCrmv" layoutX="144.0" layoutY="126.0" prefHeight="25.0" prefWidth="182.0" />
+    <Label layoutX="72.0" layoutY="155.0" text="Nome">
+      <font>
+        <Font name="System Bold Italic" size="14.0" fx:id="x3" />
+      </font>
+    </Label>
+    <Label font="$x3" layoutX="68.0" layoutY="130.0" text="CPF/CRMV" />
+    <Label layoutX="62.0" layoutY="186.0" text="Endereço">
+      <font>
+        <Font name="System Bold Italic" size="12.0" fx:id="x2" />
+      </font>
+    </Label>
+    <Label font="$x3" layoutX="59.0" layoutY="210.0" text="Rua/Av." />
+    <Label font="$x3" layoutX="59.0" layoutY="238.0" text="Nº" />
+    <TextField fx:id="tfrua" layoutX="116.0" layoutY="209.0" prefHeight="25.0" prefWidth="189.0" />
+    <TextField fx:id="tfnum" layoutX="83.0" layoutY="237.0" prefHeight="25.0" prefWidth="48.0" />
+    <TextField fx:id="tfcidade" layoutX="112.0" layoutY="265.0" prefHeight="25.0" prefWidth="113.0" />
+    <Label font="$x3" layoutX="59.0" layoutY="268.0" text="Cidade" />
+    <TextField fx:id="tfcep" layoutX="165.0" layoutY="237.0" prefHeight="25.0" prefWidth="139.0" />
+    <Label font="$x3" layoutX="135.0" layoutY="239.0" text="CEP" />
+    <TextField fx:id="tfuf" layoutX="255.0" layoutY="266.0" prefHeight="25.0" prefWidth="48.0" />
+    <Label font="$x3" layoutX="231.0" layoutY="267.0" text="UF" />
+    <Label font="$x3" layoutX="38.0" layoutY="322.0" text="Email" />
+    <Label font="$x3" layoutX="39.0" layoutY="347.0" text="Tel." />
+    <TextField fx:id="tfemail" layoutX="85.0" layoutY="318.0" prefHeight="25.0" prefWidth="185.0" />
+    <TextField fx:id="tftel" layoutX="85.0" layoutY="346.0" prefHeight="25.0" prefWidth="185.0" />
+    <Label font="$x2" layoutX="28.0" layoutY="295.0" text="Contato" />
+    <Button fx:id="btVisuUser" layoutX="331.0" layoutY="361.0" mnemonicParsing="false" onAction="#onActionVisUser" prefHeight="35.0" prefWidth="157.0" text="Visualizar Usuários">
+      <font>
+        <Font name="System Bold" size="14.0" fx:id="x5" />
+      </font>
+    </Button>
+    <TextField fx:id="tfpesquisar" layoutX="331.0" layoutY="333.0" prefHeight="25.0" prefWidth="157.0" promptText="Pesquisar" />
+    <ImageView fitHeight="20.0" fitWidth="24.0" layoutX="465.0" layoutY="336.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@IMAGENS/lupa.png" />
+      </image>
+    </ImageView>
+    <Button fx:id="btexcluir" font="$x5" layoutX="241.0" layoutY="433.0" mnemonicParsing="false" onAction="#DeleteUser" prefHeight="30.0" prefWidth="68.0" text="Excluir" />
+    <Button fx:id="btsalvar" font="$x5" layoutX="311.0" layoutY="433.0" mnemonicParsing="false" onAction="#CadastrarUser" prefHeight="30.0" prefWidth="68.0" text="Salvar" />
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff96" height="70.0" layoutX="356.0" layoutY="147.0" opacity="0.15" stroke="BLACK" strokeType="INSIDE" width="127.0" />
+    <TextField fx:id="tfsenha" disable="true" layoutX="369.0" layoutY="226.0" prefHeight="25.0" prefWidth="100.6932373046875" visible="false" />
+    <Label font="$x3" layoutX="367.0" layoutY="208.0" text="Senha" visible="false" />
+    <Label font="$x3" layoutX="364.0" layoutY="157.0" text="Tipo de Usuário" />
+    <Button fx:id="btlimpar" font="$x5" layoutX="162.0" layoutY="433.0" mnemonicParsing="false" onAction="#LimparU" prefHeight="30.0" prefWidth="77.0" text="Limpar" />
+    <TextField id="tfsenha" fx:id="tftipouser" layoutX="369.0" layoutY="178.0" prefHeight="25.0" prefWidth="100.6932373046875" />
+    <Button id="btok" layoutX="449.0" layoutY="332.0" mnemonicParsing="false" onAction="#pesquisarUser" prefHeight="25.0" prefWidth="37.999900000002526" text="OK">
+      <font>
+        <Font name="System Bold" size="10.0" />
+      </font>
+    </Button>
+    <Button id="btVisuUser" font="$x5" layoutX="356.0" layoutY="220.0" mnemonicParsing="false" onAction="#alterarSenha" prefHeight="35.0" prefWidth="127.0" text="Alterar Senha" />
+  </children>
+</Pane>

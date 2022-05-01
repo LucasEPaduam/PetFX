@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="415.0" prefWidth="507.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="controller.AgendamentoController">
+  <children>
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#9ec4e8" height="421.0" opacity="0.44" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="514.0" />
+    <Button id="" fx:id="btvoltar" layoutX="1.0" layoutY="74.0" mnemonicParsing="false" onAction="#onActionVoltarMenu" text="Voltar" />
+    <Rectangle arcHeight="5.0" arcWidth="5.0" height="182.0" layoutX="248.0" layoutY="151.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.5" width="224.0">
+      <fill>
+        <Color blue="0.788" green="0.678" opacity="0.000" red="0.553" fx:id="x1" />
+      </fill>
+    </Rectangle>
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="52.0" layoutX="1.0" layoutY="21.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="506.0" />
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="$x1" height="250.0" layoutX="38.0" layoutY="123.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.5" width="180.0" />
+    <Button id="btRelatorios" fx:id="btVisuPac" layoutX="278.0" layoutY="170.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="160.0" text="Visualizar Pacientes">
+      <font>
+        <Font name="Comic Sans MS Bold Italic" size="12.0" fx:id="x4" />
+      </font>
+    </Button>
+    <Label alignment="TOP_CENTER" contentDisplay="CENTER" layoutY="21.0" prefHeight="52.0" prefWidth="500.0" text="Agendamento" textFill="#22a0bc">
+      <font>
+        <Font name="Comic Sans MS Bold Italic" size="33.0" />
+      </font>
+    </Label>
+    <ImageView fx:id="pataVoltaMenu" fitHeight="82.0" fitWidth="81.0" layoutX="6.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" rotate="-97.1">
+      <image>
+        <Image url="@IMAGENS/logopata.png" />
+      </image>
+    </ImageView>
+    <Label layoutX="77.0" layoutY="137.0" text="Informe a data:">
+      <font>
+        <Font name="System Bold Italic" size="14.0" fx:id="x2" />
+      </font>
+    </Label>
+    <TextField fx:id="tfData" layoutX="52.0" layoutY="159.0" prefHeight="25.0" prefWidth="152.0" />
+    <Label font="$x2" layoutX="71.0" layoutY="192.0" text="Informe o horário:" />
+    <Label font="$x2" layoutX="91.0" layoutY="248.0" text="Código PET" />
+    <Label font="$x2" layoutX="65.0" layoutY="307.0" text="Código Veterinário" />
+    <TextField fx:id="tfHora" layoutX="52.0" layoutY="214.0" prefHeight="25.0" prefWidth="152.0" />
+    <TextField fx:id="tfCodPet" layoutX="51.0" layoutY="269.0" prefHeight="25.0" prefWidth="152.0" />
+    <TextField fx:id="tfCodVet" layoutX="51.0" layoutY="331.0" prefHeight="25.0" prefWidth="152.0" />
+    <Label layoutX="46.0" layoutY="97.0" text="Informe os dados abaixo:">
+      <font>
+        <Font name="System Bold" size="14.0" fx:id="x3" />
+      </font>
+    </Label>
+    <Button fx:id="btLimpar" font="$x3" layoutX="248.0" layoutY="360.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="75.0" text="Limpar" />
+    <Button fx:id="btExcluir" font="$x3" layoutX="326.0" layoutY="360.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="68.0" text="Excluir" />
+    <Button fx:id="btAgendar" font="$x3" layoutX="397.0" layoutY="360.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="82.0" text="Agendar" />
+    <Button id="btRelatorios" fx:id="btVisuVet" font="$x4" layoutX="278.0" layoutY="220.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="160.0" text="Visualizar Veterinários" />
+    <Button id="btRelatorios" fx:id="btAgendamentos" font="$x4" layoutX="274.0" layoutY="271.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="169.0" text="Visualizar Agendamentos" />
+  </children>
+</Pane>

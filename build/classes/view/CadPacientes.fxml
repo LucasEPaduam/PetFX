@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="498.0" prefWidth="518.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="controller.CadPacController">
+  <children>
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#9ec4e8" height="498.0" layoutX="0.0" layoutY="0.0" opacity="0.45" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="518.0" />
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="52.0" layoutY="26.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="507.0" />
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#bec3c4ec" height="201.0" layoutX="22.0" layoutY="191.0" opacity="0.3" stroke="BLACK" strokeType="INSIDE" width="188.0" />
+    <Rectangle arcHeight="5.0" arcWidth="5.0" height="65.0" layoutX="243.0" layoutY="138.0" opacity="0.15" stroke="BLACK" strokeType="INSIDE" width="247.0">
+      <fill>
+        <Color blue="1.000" green="1.000" opacity="0.588" red="1.000" fx:id="x1" />
+      </fill>
+    </Rectangle>
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="$x1" height="193.0" layoutX="22.0" layoutY="191.0" opacity="0.15" stroke="BLACK" strokeType="INSIDE" width="182.0" />
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="$x1" height="65.0" layoutX="232.0" layoutY="330.0" opacity="0.15" stroke="BLACK" strokeType="INSIDE" width="247.0" />
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="$x1" height="91.0" layoutX="244.0" layoutY="221.0" opacity="0.15" stroke="BLACK" strokeType="INSIDE" width="256.0" />
+    <CubicCurve controlX1="-50.0" controlX2="50.0" controlY1="-100.0" controlY2="100.0" endX="150.0" fill="#1f93ff41" layoutX="226.0" layoutY="272.0" opacity="0.5" rotate="-90.0" startX="-150.0" stroke="BLACK" />
+    <Label layoutX="186.0" layoutY="31.0" text="Pacientes" textFill="#2b98bf">
+      <font>
+        <Font name="Comic Sans MS Bold Italic" size="30.0" />
+      </font>
+    </Label>
+    <Button id="" fx:id="btvoltarMenu" layoutX="0.0" layoutY="78.0" mnemonicParsing="false" onAction="#onActionVoltarMenu" text="Voltar" />
+    <ImageView id="patavoltamenu" fx:id="patavolta" fitHeight="88.0" fitWidth="88.0" layoutX="6.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" rotate="-99.5">
+      <image>
+        <Image url="@IMAGENS/logopata.png" />
+      </image>
+    </ImageView>
+    <RadioButton fx:id="rbPas" layoutX="49.0" layoutY="164.0" mnemonicParsing="false" onAction="#criarCodPet" text="Passáro">
+      <font>
+        <Font name="System Italic" size="12.0" fx:id="x2" />
+      </font>
+      <toggleGroup>
+        <ToggleGroup fx:id="grupo" />
+      </toggleGroup>
+    </RadioButton>
+    <RadioButton fx:id="rbCachorro" font="$x2" layoutX="49.0" layoutY="140.0" mnemonicParsing="false" onAction="#criarCodPet" selected="true" text="Cachorro" toggleGroup="$grupo" />
+    <RadioButton fx:id="rbGato" font="$x2" layoutX="125.0" layoutY="140.0" mnemonicParsing="false" onAction="#criarCodPet" text="Gato" toggleGroup="$grupo" />
+    <RadioButton fx:id="rbOut" font="$x2" layoutX="125.0" layoutY="164.0" mnemonicParsing="false" onAction="#criarCodPet" text="Outros" toggleGroup="$grupo" />
+    <Label layoutX="32.0" layoutY="112.0" text="Qual a espécie do PET?">
+      <font>
+        <Font name="System Bold" size="16.0" fx:id="x4" />
+      </font>
+    </Label>
+    <Label layoutX="32.0" layoutY="205.0" text="Código">
+      <font>
+        <Font name="System Bold Italic" size="14.0" fx:id="x3" />
+      </font>
+    </Label>
+    <Label font="$x3" layoutX="32.0" layoutY="234.0" text="Nome" />
+    <Label font="$x3" layoutX="32.0" layoutY="261.0" text="Raça" />
+    <Label font="$x3" layoutX="33.0" layoutY="292.0" text="Idade" />
+    <Label font="$x3" layoutX="32.0" layoutY="322.0" text="Peso" />
+    <Label font="$x3" layoutX="32.0" layoutY="352.0" text="Genero" />
+    <TextField fx:id="tfcod" disable="true" layoutX="81.0" layoutY="203.0" prefHeight="25.0" prefWidth="110.0" />
+    <TextField fx:id="tfnomepac" layoutX="81.0" layoutY="231.0" prefHeight="25.0" prefWidth="110.0" />
+    <TextField fx:id="tfraca" layoutX="81.0" layoutY="260.0" prefHeight="25.0" prefWidth="110.0" />
+    <TextField fx:id="tfidade" layoutX="81.0" layoutY="289.0" prefHeight="25.0" prefWidth="110.0" />
+    <TextField fx:id="tfpeso" layoutX="81.0" layoutY="319.0" prefHeight="25.0" prefWidth="110.0" />
+    <TextField fx:id="tfgenero" layoutX="81.0" layoutY="349.0" prefHeight="25.0" prefWidth="110.0" />
+    <TextField fx:id="tfnomedono" layoutX="302.0" layoutY="172.0" prefHeight="25.0" prefWidth="182.0" />
+    <TextField fx:id="tfcpfdono" layoutX="302.0" layoutY="144.0" prefHeight="25.0" prefWidth="182.0" />
+    <Label font="$x3" layoutX="257.0" layoutY="173.0" text="Nome" />
+    <Label font="$x3" layoutX="256.0" layoutY="148.0" text="CPF" />
+    <Label font="$x4" layoutX="239.0" layoutY="115.0" text="Dono do PET" />
+    <Label font="$x2" layoutX="253.0" layoutY="205.0" text="Endereço" />
+    <Label font="$x3" layoutX="248.0" layoutY="228.0" text="Rua/Av." />
+    <Label font="$x3" layoutX="248.0" layoutY="256.0" text="Nº" />
+    <TextField fx:id="tfruad" layoutX="305.0" layoutY="227.0" prefHeight="25.0" prefWidth="189.0" />
+    <TextField fx:id="tfnumd" layoutX="272.0" layoutY="255.0" prefHeight="25.0" prefWidth="48.0" />
+    <TextField fx:id="tfcidaded" layoutX="301.0" layoutY="283.0" prefHeight="25.0" prefWidth="113.0" />
+    <Label font="$x3" layoutX="248.0" layoutY="286.0" text="Cidade" />
+    <TextField fx:id="tfcepd" layoutX="354.0" layoutY="255.0" prefHeight="25.0" prefWidth="139.0" />
+    <Label font="$x3" layoutX="324.0" layoutY="257.0" text="CEP" />
+    <TextField fx:id="tfufd" layoutX="444.0" layoutY="284.0" prefHeight="25.0" prefWidth="48.0" />
+    <Label font="$x3" layoutX="420.0" layoutY="285.0" text="UF" />
+    <Label font="$x3" layoutX="241.0" layoutY="340.0" text="Email" />
+    <Label font="$x3" layoutX="242.0" layoutY="365.0" text="Tel." />
+    <TextField fx:id="tfemaild" layoutX="288.0" layoutY="336.0" prefHeight="25.0" prefWidth="185.0" />
+    <TextField fx:id="tfteld" layoutX="288.0" layoutY="364.0" prefHeight="25.0" prefWidth="185.0" />
+    <Label font="$x2" layoutX="232.0" layoutY="315.0" text="Contato" />
+    <Button fx:id="btvisupac" layoutX="39.0" layoutY="442.0" mnemonicParsing="false" onAction="#onActionVisPac" prefHeight="35.0" prefWidth="157.0" text="Visualizar Pacientes">
+      <font>
+        <Font name="System Bold" size="14.0" fx:id="x5" />
+      </font>
+    </Button>
+    <TextField fx:id="tfpesquisapac" layoutX="39.0" layoutY="414.0" prefHeight="25.0" prefWidth="157.0" promptText="Pesquisar" />
+    <Button fx:id="btexclude" font="$x5" layoutX="332.0" layoutY="435.0" mnemonicParsing="false" onAction="#DeletePac" prefHeight="30.0" prefWidth="68.0" text="Excluir" />
+    <Button fx:id="btsalvar" font="$x5" layoutX="402.0" layoutY="435.0" mnemonicParsing="false" onAction="#Cadastrar" prefHeight="30.0" prefWidth="68.0" text="Salvar" />
+    <Button fx:id="btlimpar" font="$x5" layoutX="255.0" layoutY="435.0" mnemonicParsing="false" onAction="#Limpar" prefHeight="30.0" prefWidth="75.0" text="Limpar" />
+    <Button fx:id="btok" layoutX="162.0" layoutY="414.0" mnemonicParsing="false" onAction="#pesquisarPac" prefHeight="25.0" prefWidth="33.0" text="OK">
+      <font>
+        <Font name="System Bold" size="10.0" />
+      </font>
+    </Button>
+  </children>
+</Pane>

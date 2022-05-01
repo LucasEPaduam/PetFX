@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="271.0" prefWidth="285.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="controller.AlterarSenhaController">
+  <children>
+    <CubicCurve controlX1="125.28050994873047" controlX2="408.2033386230469" controlY1="-1012.980224609375" controlY2="-78.7430191040039" endX="322.7225341796875" endY="-838.7789306640625" fill="#1f93ff41" layoutX="2.0" layoutY="913.0" opacity="0.5" rotate="-90.0" startX="-39.74553680419922" startY="-530.4019775390625" stroke="BLACK" />
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#9ec4e8" height="273.0" layoutX="1.0" layoutY="-2.0" opacity="0.45" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="284.0" />
+    <AnchorPane id="AnchorPane" layoutX="449.0" layoutY="120.0" />
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="52.0" layoutX="2.0" layoutY="26.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="282.0000999999975" />
+    <Label layoutX="77.0" layoutY="31.0" text="Alterar Senha" textFill="#2b98bf">
+      <font>
+        <Font name="Comic Sans MS Bold Italic" size="25.0" />
+      </font>
+    </Label>
+    <ImageView fx:id="patavoltar" fitHeight="77.60911615532554" fitWidth="74.27435302734375" layoutX="1.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true" rotate="-41.0">
+      <image>
+        <Image url="@IMAGENS/logopata.png" />
+      </image>
+    </ImageView>
+    <Button fx:id="btsalvar" layoutX="117.0" layoutY="220.0" mnemonicParsing="false" onAction="#salvarNovaSenha" prefHeight="30.0" prefWidth="68.0" text="Salvar">
+      <font>
+        <Font name="System Bold" size="14.0" fx:id="x5" />
+      </font>
+    </Button>
+    <TextField fx:id="tfsenha" disable="true" layoutX="369.0" layoutY="226.0" prefHeight="25.0" prefWidth="100.6932373046875" visible="false" />
+    <Label layoutX="367.0" layoutY="208.0" text="Senha" visible="false">
+      <font>
+        <Font name="System Bold Italic" size="14.0" fx:id="x3" />
+      </font>
+    </Label>
+    <Rectangle arcHeight="5.0" arcWidth="5.0" height="92.0" layoutX="31.0" layoutY="101.0" opacity="0.15" stroke="BLACK" strokeType="INSIDE" width="229.0">
+      <fill>
+        <Color blue="1.000" green="1.000" opacity="0.588" red="1.000" fx:id="x1" />
+      </fill>
+    </Rectangle>
+    <TextField id="tfSenhaAtual" fx:id="tfSenhaAtual" layoutX="127.0" layoutY="135.0" prefHeight="25.0" prefWidth="125.0" />
+    <TextField id="tfUserID" fx:id="tfUserID" layoutX="127.0" layoutY="107.0" prefHeight="25.0" prefWidth="125.0" />
+    <Label font="$x3" layoutX="40.0" layoutY="136.0" text="Senha Atual" />
+    <Label font="$x3" layoutX="40.0" layoutY="111.0" text="CPF/CRMV" />
+    <TextField id="tfsenhaNew" fx:id="tfsenhaNew" layoutX="128.0" layoutY="163.0" prefHeight="25.0" prefWidth="125.0" />
+    <Label font="$x3" layoutX="41.0" layoutY="164.0" text="Nova Senha" />
+  </children>
+</Pane>

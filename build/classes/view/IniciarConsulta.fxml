@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="415.0" prefWidth="547.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="controller.IniciarConController">
+  <children>
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#9ec4e8" height="416.0" layoutX="-1.0" layoutY="-1.0" opacity="0.44" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="548.0" />
+    <Button id="" fx:id="btvoltar" layoutX="1.0" layoutY="74.0" mnemonicParsing="false" onAction="#onActionVoltarMenu" text="Voltar" />
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="52.0" layoutX="1.0" layoutY="21.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="546.0" />
+    <Label alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="74.0" layoutY="23.0" prefHeight="52.0" prefWidth="427.0" text="Iniciar Consulta" textFill="#22a0bc">
+      <font>
+        <Font name="Comic Sans MS Bold Italic" size="33.0" />
+      </font>
+    </Label>
+    <ImageView fitHeight="82.0" fitWidth="81.0" layoutX="6.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" rotate="-97.1">
+      <image>
+        <Image url="@IMAGENS/logopata.png" />
+      </image>
+    </ImageView>
+    <TableView fx:id="tvIniciarConsulta" layoutX="1.0" layoutY="143.0" prefHeight="225.0" prefWidth="546.0">
+      <columns>
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="84.0" text="DIA" fx:id="columDia" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="72.0" text="HORÁRIO" fx:id="columHorario" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="75.0" text="COD PET" fx:id="columCodPet" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="95.0" text="NOME PET" fx:id="columNomePet" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="107.0" text="CRMV" fx:id="columCRMV" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="111.0" text="NOME VET" fx:id="columNomeVet" />
+      </columns>
+    </TableView>
+    <Label layoutX="6.0" layoutY="109.0" text="Selecione a consulta e clique no botão iniciar">
+      <font>
+        <Font name="System Bold" size="16.0" />
+      </font>
+    </Label>
+    <Button fx:id="btIniciarConsulta" layoutX="378.0" layoutY="377.0" mnemonicParsing="false" onAction="#onActionIniciarConsulta" prefHeight="30.0" prefWidth="158.0" text="Iniciar Consulta">
+      <font>
+        <Font name="System Bold" size="14.0" />
+      </font>
+    </Button>
+  </children>
+</Pane>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="415.0" prefWidth="507.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="controller.MenuPrincipalController">
+  <children>
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#9ec4e8" height="421.0" opacity="0.44" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="514.0" />
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="52.0" layoutX="1.0" layoutY="21.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="506.0" />
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8dadc900" height="250.0" layoutX="273.0" layoutY="108.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.5" width="200.0" />
+    <Button fx:id="btUsuario" layoutX="63.0" layoutY="98.0" mnemonicParsing="false" onAction="#onActionUsuario" prefHeight="60.0" prefWidth="151.0" text="Usuário">
+      <font>
+        <Font name="Comic Sans MS Bold Italic" size="18.0" fx:id="x1" />
+      </font>
+    </Button>
+    <Button fx:id="bt_Paciente" font="$x1" layoutX="63.0" layoutY="169.0" mnemonicParsing="false" onAction="#onActionPaciente" prefHeight="60.0" prefWidth="151.0" text="Pacientes" />
+    <Button fx:id="btExame" font="$x1" layoutX="63.0" layoutY="239.0" mnemonicParsing="false" onAction="#onActionExame" prefHeight="60.0" prefWidth="151.0" text="Exames" />
+    <Button fx:id="btMed" font="$x1" layoutX="63.0" layoutY="311.0" mnemonicParsing="false" onAction="#onActionMed" prefHeight="60.0" prefWidth="151.0" text="Medicamentos" />
+    <Button fx:id="btAgendamento" font="$x1" layoutX="297.0" layoutY="130.0" mnemonicParsing="false" onAction="#onActionAgendamento" prefHeight="60.0" prefWidth="151.0" text="Agendamento" />
+    <Button fx:id="btConsultas" font="$x1" layoutX="297.0" layoutY="201.0" mnemonicParsing="false" onAction="#onActionConsulta" prefHeight="60.0" prefWidth="151.0" text="Consultas" />
+    <Button fx:id="btRelatorios" font="$x1" layoutX="297.0" layoutY="271.0" mnemonicParsing="false" onAction="#onActionRelatorio" prefHeight="60.0" prefWidth="151.0" text="Relatórios" />
+    <Label id="lbBoasVindas" fx:id="lbmenuPrincipal" alignment="TOP_CENTER" contentDisplay="CENTER" layoutY="21.0" prefHeight="52.0" prefWidth="500.0" text="Menu Principal" textFill="#22a0bc">
+      <font>
+        <Font name="Comic Sans MS Bold Italic" size="33.0" />
+      </font>
+    </Label>
+    <Button fx:id="btVoltar" layoutX="1.0" layoutY="73.0" mnemonicParsing="false" onAction="#VoltarLogin" text="Voltar" />
+    <ImageView fx:id="pataVoltaLogin" fitHeight="79.80038763197135" fitWidth="76.37146759033203" layoutX="6.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" rotate="260.0">
+      <image>
+        <Image url="@IMAGENS/logopata.png" />
+      </image>
+    </ImageView>
+  </children>
+</Pane>

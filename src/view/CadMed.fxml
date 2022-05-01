@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="415.0" prefWidth="507.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="controller.CadMedController">
+  <children>
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#9ec4e8" height="415.0" layoutX="-1.0" layoutY="0.0" opacity="0.44" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="507.0" />
+    <Button id="" fx:id="btvoltar" layoutX="1.0" layoutY="77.0" mnemonicParsing="false" onAction="#onActionVoltarMenu" text="Voltar" />
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="52.0" layoutY="24.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="507.0" />
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff0d" height="133.0" layoutX="133.0" layoutY="141.0" opacity="0.15" stroke="BLACK" strokeType="INSIDE" width="257.0" />
+    <Label layoutX="129.0" layoutY="29.0" prefWidth="269.0" text="MEDICAMENTOS" textFill="#2b98bf">
+      <font>
+        <Font name="Comic Sans MS Bold Italic" size="30.0" />
+      </font>
+    </Label>
+    <ImageView fitHeight="83.10000259620251" fitWidth="79.529296875" layoutX="2.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" rotate="-90.0">
+      <image>
+        <Image url="@IMAGENS/logopata.png" />
+      </image>
+    </ImageView>
+    <Label layoutX="150.0" layoutY="158.0" text="Código">
+      <font>
+        <Font name="System Bold" size="18.0" fx:id="x1" />
+      </font>
+    </Label>
+    <Button fx:id="btVisuMed" layoutX="169.0" layoutY="319.0" mnemonicParsing="false" onAction="#onActionVisMedicamento" prefHeight="25.0" prefWidth="193.0" text="Visualizar Medicamentos">
+      <font>
+        <Font name="System Bold Italic" size="14.0" />
+      </font>
+    </Button>
+    <TextField fx:id="tfcodigo" disable="true" layoutX="217.0" layoutY="159.0" />
+    <TextField id="tfN" fx:id="tfnome" layoutX="217.0" layoutY="194.0" />
+    <Label font="$x1" layoutX="151.0" layoutY="193.0" text="Nome" />
+    <TextField fx:id="tfpreco" layoutX="217.0" layoutY="229.0" />
+    <Label font="$x1" layoutX="151.0" layoutY="228.0" text="Preço" />
+    <TextField fx:id="tfpesquisar" layoutX="181.0" layoutY="288.0" prefHeight="25.0" prefWidth="167.0" />
+    <ImageView fitHeight="20.0" fitWidth="24.0" layoutX="326.0" layoutY="290.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@IMAGENS/lupa.png" />
+      </image>
+    </ImageView>
+    <Button fx:id="btSalvar" layoutX="303.0" layoutY="358.0" mnemonicParsing="false" onAction="#Cadastrar" prefHeight="30.0" prefWidth="68.0" text="Salvar">
+      <font>
+        <Font name="System Bold" size="14.0" fx:id="x2" />
+      </font>
+    </Button>
+    <Button fx:id="btExcluir" font="$x2" layoutX="233.0" layoutY="358.0" mnemonicParsing="false" onAction="#deleteRemedio" prefHeight="30.0" prefWidth="68.0" text="Excluir" />
+    <Button fx:id="btLimpar" font="$x2" layoutX="159.0" layoutY="358.0" mnemonicParsing="false" onAction="#limpar" prefHeight="30.0" prefWidth="73.0" text="Limpar" />
+    <Label layoutX="152.0" layoutY="80.0" text="Qual o tipo de medicamento?">
+      <font>
+        <Font name="System Bold" size="16.0" />
+      </font>
+    </Label>
+    <RadioButton fx:id="rbRemedio" layoutX="199.0" layoutY="111.0" mnemonicParsing="false" onAction="#criarCodRemedio" text="Remédio">
+      <font>
+        <Font name="System Italic" size="12.0" fx:id="x3" />
+      </font>
+      <toggleGroup>
+        <ToggleGroup fx:id="grupo" />
+      </toggleGroup>
+    </RadioButton>
+    <RadioButton fx:id="rbVacina" font="$x3" layoutX="275.0" layoutY="111.0" mnemonicParsing="false" onAction="#criarCodVacina" text="Vacina" toggleGroup="$grupo" />
+    <Button id="btSalvar" fx:id="btpesquisarMedicamento" layoutX="313.0" layoutY="287.0" minHeight="20.9609375" mnemonicParsing="false" onAction="#pesquisarMedicamento" prefHeight="25.0" prefWidth="36.0" text="OK">
+      <font>
+        <Font name="System Bold" size="10.0" />
+      </font>
+    </Button>
+  </children>
+</Pane>
