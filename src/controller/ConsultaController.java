@@ -25,7 +25,7 @@ import petFX.iniciarConsulta;
 public class ConsultaController implements Initializable{
     
     @FXML private Button btIniciarConsulta, btvoltar;
-    @FXML private TableView<?> tvIniciarConsulta;
+    @FXML private TableView<?> tvIniciar;
     
      @Override
     public void initialize(URL url, ResourceBundle rb) {
