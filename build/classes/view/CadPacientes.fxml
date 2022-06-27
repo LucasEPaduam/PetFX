@@ -92,7 +92,7 @@
       </font>
     </Button>
     <TextField fx:id="tfpesquisapac" layoutX="39.0" layoutY="414.0" prefHeight="25.0" prefWidth="157.0" promptText="Pesquisar" />
-    <Button fx:id="btexclude" font="$x5" layoutX="332.0" layoutY="435.0" mnemonicParsing="false" onAction="#DeletePac" prefHeight="30.0" prefWidth="68.0" text="Excluir" />
+    <Button fx:id="btexclude" font="$x5" layoutX="332.0" layoutY="435.0" mnemonicParsing="false" onAction="#deletePac" prefHeight="30.0" prefWidth="68.0" text="Excluir" />
     <Button fx:id="btsalvar" font="$x5" layoutX="402.0" layoutY="435.0" mnemonicParsing="false" onAction="#Cadastrar" prefHeight="30.0" prefWidth="68.0" text="Salvar" />
     <Button fx:id="btlimpar" font="$x5" layoutX="255.0" layoutY="435.0" mnemonicParsing="false" onAction="#Limpar" prefHeight="30.0" prefWidth="75.0" text="Limpar" />
     <Button fx:id="btok" layoutX="162.0" layoutY="414.0" mnemonicParsing="false" onAction="#pesquisarPac" prefHeight="25.0" prefWidth="33.0" text="OK">
