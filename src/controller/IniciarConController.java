@@ -5,7 +5,6 @@
  */
 package controller;
 
-
 import dao.AgendamentoDao;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -15,13 +14,14 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import model.Agendamento;
-import petFX.Consulta;
+import petFX.ConsultaTela;
 import petFX.MenuPrincipal;
 import petFX.iniciarConsulta;
 
@@ -29,26 +29,33 @@ import petFX.iniciarConsulta;
  *
  * @author Lucas Eduardo
  */
-public class IniciarConController implements Initializable{
-    
-    @FXML private Button btIniciarConsulta, btvoltar;
-    @FXML private TableView<Agendamento> tvIniciarConsulta;
-    @FXML private TableColumn<Agendamento, String> columCRMV;
-    @FXML private TableColumn<Agendamento, String> columCodPet;
-    @FXML private TableColumn<Agendamento, String> columDia;
-    @FXML private TableColumn<Agendamento, String> columHorario;
-    @FXML private TableColumn<Agendamento, String> columNomePet;
-    @FXML private TableColumn<Agendamento, String> columNomeVet;
-    
-     @Override
+public class IniciarConController implements Initializable {
+
+    @FXML
+    private Button btIniciarConsulta, btvoltar;
+    @FXML
+    private TableView<Agendamento> tvIniciarConsulta;
+    @FXML
+    private TableColumn<Agendamento, String> columCRMV;
+    @FXML
+    private TableColumn<Agendamento, String> columCodPet;
+    @FXML
+    private TableColumn<Agendamento, String> columDia;
+    @FXML
+    private TableColumn<Agendamento, String> columHorario;
+    @FXML
+    private TableColumn<Agendamento, String> columNomePet;
+    @FXML
+    private TableColumn<Agendamento, String> columNomeVet;
+
+    @Override
     public void initialize(URL url, ResourceBundle rb) {
         System.out.println("Iniciar Consulta inicializado!");
         iniciarTabelaAgendamentoDia();
     }
-    
-    
-    public void iniciarTabelaAgendamentoDia(){
-        
+
+    public void iniciarTabelaAgendamentoDia() {
+
         columDia.setCellValueFactory(new PropertyValueFactory("dataCon"));
         columHorario.setCellValueFactory(new PropertyValueFactory("horaCon"));
         columCodPet.setCellValueFactory(new PropertyValueFactory("codigopet"));
@@ -57,37 +64,40 @@ public class IniciarConController implements Initializable{
         columCRMV.setCellValueFactory(new PropertyValueFactory("cpfcrmv"));
         tvIniciarConsulta.setItems(atualizaTabelaAgendamentosDia());
     }
-    
-    public ObservableList<Agendamento>atualizaTabelaAgendamentosDia(){
-        
+
+    public ObservableList<Agendamento> atualizaTabelaAgendamentosDia() {
+
         AgendamentoDao ad = new AgendamentoDao();
         return FXCollections.observableArrayList(ad.getListAgendamentosDia());
-               
+
     }
-    
+
     public void onActionIniciarConsulta() {
 
-        Consulta c = new Consulta();
-            
-            try {
-                c.start(new Stage());
-                iniciarConsulta.getStage().close();
-            }catch (Exception ex) {
-                Logger.getLogger(LoginController.class.getName()).log(Level.SEVERE, null, ex);
-            }
+        int i = tvIniciarConsulta.getSelectionModel().getSelectedIndex();
+        Agendamento agendamento = tvIniciarConsulta.getItems().get(i);
 
+        ConsultaTela c = new ConsultaTela();
+
+        try {
+            c.start(new Stage(), agendamento);
+            iniciarConsulta.getStage().close();
+        } catch (Exception ex) {
+            Logger.getLogger(LoginController.class.getName()).log(Level.SEVERE, null, ex);
         }
-    
+
+    }
+
     public void onActionVoltarMenu() {
 
         MenuPrincipal mp = new MenuPrincipal();
-            
-            try {
-                mp.start(new Stage());
-                iniciarConsulta.getStage().close();
-            }catch (Exception ex) {
-                Logger.getLogger(LoginController.class.getName()).log(Level.SEVERE, null, ex);
-            }
 
+        try {
+            mp.start(new Stage());
+            iniciarConsulta.getStage().close();
+        } catch (Exception ex) {
+            Logger.getLogger(LoginController.class.getName()).log(Level.SEVERE, null, ex);
         }
+
+    }
 }

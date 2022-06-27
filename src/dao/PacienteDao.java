@@ -22,24 +22,24 @@ import model.Paciente;
  * @author Lucas Eduardo
  */
 public class PacienteDao {
-    
+
     private Connection con;
-    
-    public PacienteDao(){
-        
+
+    public PacienteDao() {
+
         this.con = BDFabricaCon.getConnection();
-}
-    
-   public List<Paciente> getList(){
-       
-      List<Paciente> paciente = new ArrayList<>();
-      String sql = "SELECT * FROM Paciente ORDER BY nomepet;";
-      
+    }
+
+    public List<Paciente> getList() {
+
+        List<Paciente> paciente = new ArrayList<>();
+        String sql = "SELECT * FROM Paciente ORDER BY nomepet;";
+
         try {
             PreparedStatement stmt = con.prepareStatement(sql);
             ResultSet rs = stmt.executeQuery();
-            while (rs.next()){
-                
+            while (rs.next()) {
+
                 Paciente pac = new Paciente();
                 pac.setCodigopet(rs.getString("codigopet"));
                 pac.setNomepet(rs.getString("nomepet"));
@@ -55,31 +55,28 @@ public class PacienteDao {
                 pac.setUF(rs.getString("UF"));
                 pac.setEmail(rs.getString("email"));
                 pac.setTelefone(rs.getString("telefone"));
-                paciente.add(pac);                
+                paciente.add(pac);
             }
             stmt.close();
             rs.close();
             con.close();
-            } catch (SQLException ex) {
+        } catch (SQLException ex) {
             ex.printStackTrace();
             System.out.println("ERRO, PEQUISA NÃO REALIZADA");
             return null;
-        }      
-               
-    return paciente;
-   }
-        
-    
-    
+        }
+
+        return paciente;
+    }
+
     public boolean insertPac(Paciente paciente) {
 
-        String sql = "INSERT INTO Paciente (codigopet, nomepet, raca, idade, peso, sexo," 
-            + "cpfdono, nomedono, rua, numero, cep, cidade, UF, email, telefone)" +
-              "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+        String sql = "INSERT INTO Paciente (codigopet, nomepet, raca, idade, peso, sexo,"
+                + "cpfdono, nomedono, rua, numero, cep, cidade, UF, email, telefone)"
+                + "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 
-        
-        try{
-                
+        try {
+
             PreparedStatement stmt = con.prepareStatement(sql);
             stmt.setString(1, paciente.getCodigopet());
             stmt.setString(2, paciente.getNomepet());
@@ -98,8 +95,8 @@ public class PacienteDao {
             stmt.setString(15, paciente.getTelefone());
             stmt.execute();
             return true;
-            
-        }catch (SQLException ex) {
+
+        } catch (SQLException ex) {
             Logger.getLogger(PacienteDao.class.getName()).log(Level.SEVERE, null, ex);
             return false;
         } finally {
@@ -107,25 +104,24 @@ public class PacienteDao {
             try {
                 if (con != null) {
                     con.close();
-                   }
+                }
             } catch (SQLException ex) {
                 Logger.getLogger(PacienteDao.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
-        
+
     }
-    
+
     public boolean updatePac(Paciente paciente) {
 
-        String sql = "UPDATE Paciente SET nomepet = ?, raca = ?, idade = ?, peso = ?, sexo = ?," 
-            + "cpfdono = ?, nomedono = ?, rua = ?, numero = ?, cep = ?, cidade = ?, UF = ?, email = ?, telefone = ?" +
-              "WHERE codigopet =?";
+        String sql = "UPDATE Paciente SET nomepet = ?, raca = ?, idade = ?, peso = ?, sexo = ?,"
+                + "cpfdono = ?, nomedono = ?, rua = ?, numero = ?, cep = ?, cidade = ?, UF = ?, email = ?, telefone = ?"
+                + "WHERE codigopet =?";
 
-        
-        try{
-                
+        try {
+
             PreparedStatement stmt = con.prepareStatement(sql);
-            
+
             stmt.setString(1, paciente.getNomepet());
             stmt.setString(2, paciente.getRaca());
             stmt.setString(3, paciente.getIdade());
@@ -145,8 +141,8 @@ public class PacienteDao {
             stmt.close();
             con.close();
             return true;
-            
-        }catch (SQLException ex) {
+
+        } catch (SQLException ex) {
             Logger.getLogger(PacienteDao.class.getName()).log(Level.SEVERE, null, ex);
             return false;
         } finally {
@@ -154,30 +150,29 @@ public class PacienteDao {
             try {
                 if (con != null) {
                     con.close();
-                   }
+                }
             } catch (SQLException ex) {
                 Logger.getLogger(PacienteDao.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
-        
+
     }
-    
-     public boolean deletePac(Paciente paciente) {
+
+    public boolean deletePac(Paciente paciente) {
 
         String sql = "DELETE FROM Paciente WHERE codigopet =?";
 
-        
-        try{
-                
+        try {
+
             PreparedStatement stmt = con.prepareStatement(sql);
-            
+
             stmt.setString(1, paciente.getCodigopet());
             stmt.execute();
             stmt.close();
             con.close();
             return true;
-            
-        }catch (SQLException ex) {
+
+        } catch (SQLException ex) {
             Logger.getLogger(PacienteDao.class.getName()).log(Level.SEVERE, null, ex);
             return false;
         } finally {
@@ -185,16 +180,15 @@ public class PacienteDao {
             try {
                 if (con != null) {
                     con.close();
-                   }
+                }
             } catch (SQLException ex) {
                 Logger.getLogger(PacienteDao.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
-        
+
     }
-     
-     
-     public String codPac(String codpet) {
+
+    public String codPac(String codpet) {
 
         Connection con = null;
         ResultSet rs = null;
@@ -204,7 +198,7 @@ public class PacienteDao {
         try {
             con = BDFabricaCon.getConnection();
             String sql = "SELECT codigopet FROM Paciente "
-                + "WHERE codigopet='" + codpet + "';";
+                    + "WHERE codigopet='" + codpet + "';";
 
             st = (Statement) con.createStatement();
             rs = st.executeQuery(sql);
@@ -214,8 +208,7 @@ public class PacienteDao {
             }
 
         } catch (SQLException ex) {
-            
-            
+
             Logger.getLogger(LoginDao.class.getName()).log(Level.SEVERE, null, ex);
         } finally {
 
@@ -223,12 +216,12 @@ public class PacienteDao {
                 if (con != null) {
                     con.close();
                 }
-                
-                if(st != null){
+
+                if (st != null) {
                     st.close();
                 }
-                
-                if(rs != null){
+
+                if (rs != null) {
                     rs.close();
                 }
             } catch (SQLException ex) {
@@ -237,18 +230,18 @@ public class PacienteDao {
         }
         return userName;
     }
-    
-     public Paciente pesquisar(String codpet){
-       
-      Paciente pac = new Paciente();
-      String sql = "SELECT * FROM Paciente WHERE codigopet = ?";
-      
+
+    public Paciente pesquisar(String codpet) {
+
+        Paciente pac = new Paciente();
+        String sql = "SELECT * FROM Paciente WHERE codigopet = ?";
+
         try {
             PreparedStatement stmt = con.prepareStatement(sql);
             stmt.setString(1, codpet);
             ResultSet rs = stmt.executeQuery();
-            if (rs.next()){
-                                
+            if (rs.next()) {
+
                 pac.setCodigopet(rs.getString("codigopet"));
                 pac.setNomepet(rs.getString("nomepet"));
                 pac.setRaca(rs.getString("raca"));
@@ -264,18 +257,74 @@ public class PacienteDao {
                 pac.setUF(rs.getString("UF"));
                 pac.setEmail(rs.getString("email"));
                 pac.setTelefone(rs.getString("telefone"));
-                                
-            }else{
+
+            } else {
                 return null;
             }
             stmt.close();
             rs.close();
             con.close();
-            } catch (SQLException ex) {
+        } catch (SQLException ex) {
             ex.printStackTrace();
             return null;
-        }      
-               
-    return pac;
-   }
+        }
+
+        return pac;
+    }
+
+    public List<String> getListCodPet() {
+
+        List<String> paciente = new ArrayList<>();
+        String sql = "SELECT codigopet FROM Paciente ORDER BY codigopet;";
+
+        try {
+            PreparedStatement stmt = con.prepareStatement(sql);
+            ResultSet rs = stmt.executeQuery();
+            while (rs.next()) {
+
+                Paciente pac = new Paciente();
+                pac.setCodigopet(rs.getString("codigopet"));
+
+                paciente.add(pac.getCodigopet());
+            }
+            stmt.close();
+            rs.close();
+            con.close();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            System.out.println("ERRO, PEQUISA NÃO REALIZADA");
+            return null;
+        }
+
+        return paciente;
+    }
+    
+    public String pesquisarNomePet(String codpet) {
+
+        Paciente pac = new Paciente();
+        String sql = "SELECT nomepet FROM Paciente WHERE codigopet = ?";
+
+        try {
+            PreparedStatement stmt = con.prepareStatement(sql);
+            stmt.setString(1, codpet);
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next()) {
+
+                
+                pac.setNomepet(rs.getString("nomepet"));
+                
+
+            } else {
+                return null;
+            }
+            stmt.close();
+            rs.close();
+            con.close();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            return null;
+        }
+
+        return pac.getNomepet();
+    }
 }

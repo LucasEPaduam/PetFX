@@ -16,69 +16,65 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import model.Remedio;
-
+import model.Vacina;
 
 /**
  *
  * @author Lucas Eduardo
  */
 public class RemedioDao {
-    
+
     private Connection con;
-    
-    public RemedioDao(){
-        
+
+    public RemedioDao() {
+
         this.con = BDFabricaCon.getConnection();
-       
-}
-    
-     public List<Remedio> getListRemedio(){
-       
-      List<Remedio> tiposRemedio = new ArrayList<>();
-      String sql = "SELECT * FROM petRemedio ORDER BY nome;";
-      
+
+    }
+
+    public List<Remedio> getListRemedio() {
+
+        List<Remedio> tiposRemedio = new ArrayList<>();
+        String sql = "SELECT * FROM petRemedio ORDER BY nome;";
+
         try {
             PreparedStatement stmt = con.prepareStatement(sql);
             ResultSet rs = stmt.executeQuery();
-            while (rs.next()){
-                
+            while (rs.next()) {
+
                 Remedio remedio = new Remedio();
                 remedio.setCodigoR(rs.getString("codigo"));
                 remedio.setNomeR(rs.getString("nome"));
                 remedio.setPrecoR(rs.getString("preco"));
-                
-                tiposRemedio.add(remedio);                
+
+                tiposRemedio.add(remedio);
             }
             stmt.close();
             rs.close();
             con.close();
-            } catch (SQLException ex) {
+        } catch (SQLException ex) {
             ex.printStackTrace();
             System.out.println("ERRO, PEQUISA NÃO REALIZADA");
             return null;
-        }      
-               
-    return tiposRemedio;
-   }
-        
-    
-    
+        }
+
+        return tiposRemedio;
+    }
+
     public boolean insertRemedio(Remedio remedio) {
 
-        
-        
-        try{
-            
+        try {
+
             String sql = "INSERT INTO petRemedio (codigo, nome, preco)VALUES (?,?,?)";
             PreparedStatement stmt = con.prepareStatement(sql);
             stmt.setString(1, remedio.getCodigoR());
             stmt.setString(2, remedio.getNomeR());
             stmt.setString(3, remedio.getPrecoR());
-            
+
             stmt.execute();
             return true;
-            
-        }catch (SQLException ex) {
+
+        } catch (SQLException ex) {
             Logger.getLogger(PacienteDao.class.getName()).log(Level.SEVERE, null, ex);
             return false;
         } finally {
@@ -86,34 +82,32 @@ public class RemedioDao {
             try {
                 if (con != null) {
                     con.close();
-                   }
+                }
             } catch (SQLException ex) {
                 Logger.getLogger(PacienteDao.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
-        
+
     }
-    
+
     public boolean updateRemedio(Remedio remedio) {
 
         String sql = "UPDATE petRemedio SET nome = ?, preco = ? WHERE codigo =?";
 
-        
-        try{
-                
+        try {
+
             PreparedStatement stmt = con.prepareStatement(sql);
-            
+
             stmt.setString(1, remedio.getNomeR());
             stmt.setString(2, remedio.getPrecoR());
             stmt.setString(3, remedio.getCodigoR());
-            
-            
+
             stmt.execute();
             stmt.close();
             con.close();
             return true;
-            
-        }catch (SQLException ex) {
+
+        } catch (SQLException ex) {
             Logger.getLogger(PacienteDao.class.getName()).log(Level.SEVERE, null, ex);
             return false;
         } finally {
@@ -121,30 +115,29 @@ public class RemedioDao {
             try {
                 if (con != null) {
                     con.close();
-                   }
+                }
             } catch (SQLException ex) {
                 Logger.getLogger(PacienteDao.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
-        
+
     }
-    
-     public boolean deleteRemedio(Remedio remedio) {
+
+    public boolean deleteRemedio(Remedio remedio) {
 
         String sql = "DELETE FROM petRemedio WHERE codigo =?";
 
-        
-        try{
-                
+        try {
+
             PreparedStatement stmt = con.prepareStatement(sql);
-            
+
             stmt.setString(1, remedio.getCodigoR());
             stmt.execute();
             stmt.close();
             con.close();
             return true;
-            
-        }catch (SQLException ex) {
+
+        } catch (SQLException ex) {
             Logger.getLogger(RemedioDao.class.getName()).log(Level.SEVERE, null, ex);
             return false;
         } finally {
@@ -152,16 +145,15 @@ public class RemedioDao {
             try {
                 if (con != null) {
                     con.close();
-                   }
+                }
             } catch (SQLException ex) {
                 Logger.getLogger(RemedioDao.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
-        
+
     }
-     
-     
-     public String codRemedio(String codRemedio) {
+
+    public String codRemedio(String codRemedio) {
 
         Connection con = null;
         ResultSet rs = null;
@@ -171,7 +163,7 @@ public class RemedioDao {
         try {
             con = BDFabricaCon.getConnection();
             String sql = "SELECT codigo FROM petRemedio "
-                + "WHERE codigo='" + codRemedio + "';";
+                    + "WHERE codigo='" + codRemedio + "';";
 
             st = (Statement) con.createStatement();
             rs = st.executeQuery(sql);
@@ -181,8 +173,7 @@ public class RemedioDao {
             }
 
         } catch (SQLException ex) {
-            
-            
+
             Logger.getLogger(LoginDao.class.getName()).log(Level.SEVERE, null, ex);
         } finally {
 
@@ -190,12 +181,12 @@ public class RemedioDao {
                 if (con != null) {
                     con.close();
                 }
-                
-                if(st != null){
+
+                if (st != null) {
                     st.close();
                 }
-                
-                if(rs != null){
+
+                if (rs != null) {
                     rs.close();
                 }
             } catch (SQLException ex) {
@@ -204,36 +195,62 @@ public class RemedioDao {
         }
         return userName;
     }
-    
-     public Remedio pesquisar(String codRemedio){
-       
-      Remedio remedio = new Remedio();
-      String sql = "SELECT * FROM petRemedio WHERE codigo = ?";
-      
+
+    public Remedio pesquisar(String codRemedio) {
+
+        Remedio remedio = new Remedio();
+        String sql = "SELECT * FROM petRemedio WHERE codigo = ?";
+
         try {
             PreparedStatement stmt = con.prepareStatement(sql);
             stmt.setString(1, codRemedio);
             ResultSet rs = stmt.executeQuery();
-            if (rs.next()){
-                                
+            if (rs.next()) {
+
                 remedio.setCodigoR(rs.getString("codigo"));
                 remedio.setNomeR(rs.getString("nome"));
                 remedio.setPrecoR(rs.getString("preco"));
-                
-                                
-            }else{
+
+            } else {
                 return null;
             }
             stmt.close();
             rs.close();
             con.close();
-            } catch (SQLException ex) {
+        } catch (SQLException ex) {
             ex.printStackTrace();
             return null;
-        }      
-               
-    return remedio;
-   }
-    
-    
+        }
+
+        return remedio;
+    }
+
+    public List<String> getListNomeRemedios() {
+
+        List<String> remList = new ArrayList<>();
+
+        String sql = "SELECT nome FROM petRemedio ORDER BY nome";
+
+        try {
+            PreparedStatement stmt = con.prepareStatement(sql);
+            ResultSet rs = stmt.executeQuery();
+            while (rs.next()) {
+
+                Remedio rem = new Remedio();
+                rem.setNomeR(rs.getString("nome"));
+
+                remList.add(rem.getNomeR());
+            }
+            stmt.close();
+            rs.close();
+            con.close();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            System.out.println("ERRO, PEQUISA NÃO REALIZADA");
+            return null;
+        }
+
+        return remList;
+
+    }
 }

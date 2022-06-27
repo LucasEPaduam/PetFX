@@ -25,7 +25,7 @@ import javafx.scene.input.TouchEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
-import petFX.Agendamento;
+import petFX.AgendamentoTela;
 import petFX.CadExames;
 import petFX.CadMed;
 import petFX.CadPac;
@@ -129,7 +129,7 @@ public class MenuPrincipalController implements Initializable{
     
     public void onActionAgendamento() {
 
-        Agendamento ag = new Agendamento();
+        AgendamentoTela ag = new AgendamentoTela();
             
             try {
                 ag.start(new Stage());

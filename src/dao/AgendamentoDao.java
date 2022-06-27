@@ -73,7 +73,7 @@ public class AgendamentoDao {
         try{
                 
             PreparedStatement stmt = con.prepareStatement(sql);
-            stmt.setString(1, agendamento.getHoraCon());
+            stmt.setString(1, agendamento.getDataCon());
             stmt.setString(2, agendamento.getHoraCon());
             stmt.setString(3, agendamento.getCodigopet());
             stmt.setString(4, agendamento.getNomepet());
@@ -166,4 +166,7 @@ public class AgendamentoDao {
                
     return agendamentos;
    }
+     
+     
+     
 }

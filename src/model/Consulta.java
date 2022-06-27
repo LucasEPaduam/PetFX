@@ -10,27 +10,51 @@ package model;
  * @author Lucas Eduardo
  */
 public class Consulta {
-    
-    
-        private String dataCon;       
-        private String horaCon;
-        private String codigopet;
-        private String nomepet;
-        private String cpfcrmv;
-        private String nomeUser;
-        private String pesoCon;  
 
-    public Consulta(String dataCon, String horaCon, String codigopet, String nomepet, String cpfcrmv, String nomeUser) {
+    private String dataCon;
+    private String horaCon;
+    private String codigopet;
+    private String nomepet;
+    private String cpfcrmv;
+    private String nomeUser;
+    private String pesoCon;
+    private String idadeCon;
+    private String obsCon;
+    private String vacina1;
+    private String vacina2;
+    private String vacina3;
+    private String remedio1;
+    private String remedio2;
+    private String remedio3;
+    private String exame1;
+    private String exame2;
+    private String exame3;
+
+    public Consulta() {
+    }
+
+    public Consulta(String dataCon, String horaCon, String codigopet, String nomepet, String cpfcrmv, String nomeUser, String pesoCon, String idadeCon, String obsCon, String vacina1, String vacina2, String vacina3, String remedio1, String remedio2, String remedio3, String exame1, String exame2, String exame3) {
         this.dataCon = dataCon;
         this.horaCon = horaCon;
         this.codigopet = codigopet;
         this.nomepet = nomepet;
         this.cpfcrmv = cpfcrmv;
         this.nomeUser = nomeUser;
+        this.pesoCon = pesoCon;
+        this.idadeCon = idadeCon;
+        this.obsCon = obsCon;
+        this.vacina1 = vacina1;
+        this.vacina2 = vacina2;
+        this.vacina3 = vacina3;
+        this.remedio1 = remedio1;
+        this.remedio2 = remedio2;
+        this.remedio3 = remedio3;
+        this.exame1 = exame1;
+        this.exame2 = exame2;
+        this.exame3 = exame3;
     }
-        
-        
 
+   
     public String getDataCon() {
         return dataCon;
     }
@@ -103,40 +127,76 @@ public class Consulta {
         this.obsCon = obsCon;
     }
 
-    public String getVacina() {
-        return vacina;
+    public String getVacina1() {
+        return vacina1;
     }
 
-    public void setVacina(String vacina) {
-        this.vacina = vacina;
+    public void setVacina1(String vacina1) {
+        this.vacina1 = vacina1;
     }
 
-    public String getRemedio() {
-        return remedio;
+    public String getRemedio1() {
+        return remedio1;
     }
 
-    public void setRemedio(String remedio) {
-        this.remedio = remedio;
+    public void setRemedio1(String remedio1) {
+        this.remedio1 = remedio1;
     }
 
-    public String getExame() {
-        return exame;
+    public String getExame1() {
+        return exame1;
     }
 
-    public void setExame(String exame) {
-        this.exame = exame;
+    public void setExame1(String exame1) {
+        this.exame1 = exame1;
     }
-        private String idadeCon;
-        private String obsCon;
-        private String vacina;
-        private String remedio;
-        private String exame;
-    
-    
-    
-    
-    
-    
-    
-    
+
+    public String getVacina2() {
+        return vacina2;
+    }
+
+    public void setVacina2(String vacina2) {
+        this.vacina2 = vacina2;
+    }
+
+    public String getRemedio2() {
+        return remedio2;
+    }
+
+    public void setRemedio2(String remedio2) {
+        this.remedio2 = remedio2;
+    }
+
+    public String getExame2() {
+        return exame2;
+    }
+
+    public void setExame2(String exame2) {
+        this.exame2 = exame2;
+    }
+
+    public String getVacina3() {
+        return vacina3;
+    }
+
+    public void setVacina3(String vacina3) {
+        this.vacina3 = vacina3;
+    }
+
+    public String getRemedio3() {
+        return remedio3;
+    }
+
+    public void setRemedio3(String remedio3) {
+        this.remedio3 = remedio3;
+    }
+
+    public String getExame3() {
+        return exame3;
+    }
+
+    public void setExame3(String exame3) {
+        this.exame3 = exame3;
+    }
+
 }

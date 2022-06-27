@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import model.User;
 import model.Vacina;
 
 /**
@@ -22,62 +23,59 @@ import model.Vacina;
  * @author Lucas Eduardo
  */
 public class VacinaDao {
-    
-     private Connection con;
-    
-    public VacinaDao(){
-        
+
+    private Connection con;
+
+    public VacinaDao() {
+
         this.con = BDFabricaCon.getConnection();
-       
-}
-    
-     public List<Vacina> getListVacina(){
-       
-      List<Vacina> tiposVacinas = new ArrayList<>();
-      String sql = "SELECT * FROM petVacina ORDER BY nome;";
-      
+
+    }
+
+    public List<Vacina> getListVacina() {
+
+        List<Vacina> tiposVacinas = new ArrayList<>();
+        String sql = "SELECT * FROM petVacina ORDER BY nome;";
+
         try {
             PreparedStatement stmt = con.prepareStatement(sql);
             ResultSet rs = stmt.executeQuery();
-            while (rs.next()){
-                
+            while (rs.next()) {
+
                 Vacina vacina = new Vacina();
                 vacina.setCodigoV(rs.getString("codigo"));
                 vacina.setNomeV(rs.getString("nome"));
                 vacina.setPrecoV(rs.getString("preco"));
-                
-                tiposVacinas.add(vacina);                
+
+                tiposVacinas.add(vacina);
             }
             stmt.close();
             rs.close();
             con.close();
-            } catch (SQLException ex) {
+        } catch (SQLException ex) {
             ex.printStackTrace();
             System.out.println("ERRO, PEQUISA NÃO REALIZADA");
             return null;
-        }      
-               
-    return tiposVacinas;
-   }
-        
-    
-    
+        }
+
+        return tiposVacinas;
+    }
+
     public boolean insertVacina(Vacina vacina) {
 
         String sql = "INSERT INTO petVacina (codigo, nome, preco)VALUES (?,?,?)";
 
-        
-        try{
-                
+        try {
+
             PreparedStatement stmt = con.prepareStatement(sql);
             stmt.setString(1, vacina.getCodigoV());
             stmt.setString(2, vacina.getNomeV());
             stmt.setString(3, vacina.getPrecoV());
-            
+
             stmt.execute();
             return true;
-            
-        }catch (SQLException ex) {
+
+        } catch (SQLException ex) {
             Logger.getLogger(VacinaDao.class.getName()).log(Level.SEVERE, null, ex);
             return false;
         } finally {
@@ -85,34 +83,32 @@ public class VacinaDao {
             try {
                 if (con != null) {
                     con.close();
-                   }
+                }
             } catch (SQLException ex) {
                 Logger.getLogger(VacinaDao.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
-        
+
     }
-    
+
     public boolean updateVacina(Vacina vacina) {
 
         String sql = "UPDATE petVacina SET nome = ?, preco = ? WHERE codigo =?";
 
-        
-        try{
-                
+        try {
+
             PreparedStatement stmt = con.prepareStatement(sql);
-            
+
             stmt.setString(1, vacina.getNomeV());
             stmt.setString(2, vacina.getPrecoV());
             stmt.setString(3, vacina.getCodigoV());
-            
-            
+
             stmt.execute();
             stmt.close();
             con.close();
             return true;
-            
-        }catch (SQLException ex) {
+
+        } catch (SQLException ex) {
             Logger.getLogger(VacinaDao.class.getName()).log(Level.SEVERE, null, ex);
             return false;
         } finally {
@@ -120,30 +116,29 @@ public class VacinaDao {
             try {
                 if (con != null) {
                     con.close();
-                   }
+                }
             } catch (SQLException ex) {
                 Logger.getLogger(VacinaDao.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
-        
+
     }
-    
-     public boolean deleteVacina(Vacina vacina) {
+
+    public boolean deleteVacina(Vacina vacina) {
 
         String sql = "DELETE FROM petVacina WHERE codigo =?";
 
-        
-        try{
-                
+        try {
+
             PreparedStatement stmt = con.prepareStatement(sql);
-            
+
             stmt.setString(1, vacina.getCodigoV());
             stmt.execute();
             stmt.close();
             con.close();
             return true;
-            
-        }catch (SQLException ex) {
+
+        } catch (SQLException ex) {
             Logger.getLogger(VacinaDao.class.getName()).log(Level.SEVERE, null, ex);
             return false;
         } finally {
@@ -151,16 +146,15 @@ public class VacinaDao {
             try {
                 if (con != null) {
                     con.close();
-                   }
+                }
             } catch (SQLException ex) {
                 Logger.getLogger(VacinaDao.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
-        
+
     }
-     
-     
-     public String codVacina(String codVacina) {
+
+    public String codVacina(String codVacina) {
 
         Connection con = null;
         ResultSet rs = null;
@@ -170,7 +164,7 @@ public class VacinaDao {
         try {
             con = BDFabricaCon.getConnection();
             String sql = "SELECT codigo FROM petVacina "
-                + "WHERE codigo='" + codVacina + "';";
+                    + "WHERE codigo='" + codVacina + "';";
 
             st = (Statement) con.createStatement();
             rs = st.executeQuery(sql);
@@ -180,8 +174,7 @@ public class VacinaDao {
             }
 
         } catch (SQLException ex) {
-            
-            
+
             Logger.getLogger(VacinaDao.class.getName()).log(Level.SEVERE, null, ex);
         } finally {
 
@@ -189,12 +182,12 @@ public class VacinaDao {
                 if (con != null) {
                     con.close();
                 }
-                
-                if(st != null){
+
+                if (st != null) {
                     st.close();
                 }
-                
-                if(rs != null){
+
+                if (rs != null) {
                     rs.close();
                 }
             } catch (SQLException ex) {
@@ -203,40 +196,63 @@ public class VacinaDao {
         }
         return userName;
     }
-    
-     public Vacina pesquisar(String codVacina){
-       
-      Vacina vacina = new Vacina();
-      String sql = "SELECT * FROM petVacina WHERE codigo = ?";
-      
+
+    public Vacina pesquisar(String codVacina) {
+
+        Vacina vacina = new Vacina();
+        String sql = "SELECT * FROM petVacina WHERE codigo = ?";
+
         try {
             PreparedStatement stmt = con.prepareStatement(sql);
             stmt.setString(1, codVacina);
             ResultSet rs = stmt.executeQuery();
-            
-            if (rs.next()){
-                                
+
+            if (rs.next()) {
+
                 vacina.setCodigoV(rs.getString("codigo"));
                 vacina.setNomeV(rs.getString("nome"));
                 vacina.setPrecoV(rs.getString("preco"));
-                
-                                
-            }else{
+
+            } else {
                 return null;
             }
             stmt.close();
             rs.close();
             con.close();
-            } catch (SQLException ex) {
+        } catch (SQLException ex) {
             ex.printStackTrace();
             return null;
-        }      
-               
-    return vacina;
-   }
-    
-    
-    
-    
-    
+        }
+
+        return vacina;
+    }
+
+    public List<String> getListNomeVacinas() {
+
+        List<String> vacList = new ArrayList<>();
+
+        String sql = "SELECT nome FROM petVacina ORDER BY nome";
+
+        try {
+            PreparedStatement stmt = con.prepareStatement(sql);
+            ResultSet rs = stmt.executeQuery();
+            while (rs.next()) {
+
+                Vacina vac = new Vacina();
+                vac.setNomeV(rs.getString("nome"));
+
+                vacList.add(vac.getNomeV());
+            }
+            stmt.close();
+            rs.close();
+            con.close();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            System.out.println("ERRO, PEQUISA NÃO REALIZADA");
+            return null;
+        }
+
+        return vacList;
+
+    }
 }
