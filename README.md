@@ -18,9 +18,8 @@ Emite relatórios das consultas realizadas e receita médica da consulta.
 - [Modelo C4](#-Modelo-C4)
 - [Diagrama de Contexo](#-Diagrama-de-Contexto)
 - [Diagrama de Containers](#-Diagrama-de-Containers)
-- [Diagrama de Componentes (LOG)](#-Diagrama-de-Componentes)
-- [Diagrama de Componentes (API)](#-Diagrama-de-Componentes)
-- [Diagrama de Codigo](#-Diagrama-de-Codigo)
+- [Diagrama de Componentes](#-Diagrama-de-Componentes)
+
 
 
 ## Objetivo
@@ -41,7 +40,7 @@ realizadas por veterinários autonômos ou clinícas de pequeno porte.
   <tr>
     <td align="center">
       <a href="#">
-        <img src="https://avatars.githubusercontent.com/u/79526125?s=400&u=0d2c7957a6bc641bfea2320b04c455d8a7bd498a&v=4" width="100px;"/><br>
+        <img src="https://avatars.githubusercontent.com/u/79526125?s=400&u=0d2c7957a6bc641bfea2320b04c455d8a7bd498a&v=4" width="200px;"/><br>
         <sub>
           <b>Lucas Paduam</b>
         </sub>
