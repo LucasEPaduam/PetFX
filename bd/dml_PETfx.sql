@@ -7,43 +7,34 @@ INSERT INTO Usuario (cpf_crmv, nome_user, rua, numero, cep, cidade, UF, tipo_use
 ("27356452345", "Luana Ana", "major alfredo", "456", "13046755","campinas", "SP", "administrativo", "3421", "@gmail.com", "78787");
 
 INSERT INTO petExame (codigo, nome, preco) VALUES
-("E101", "eletrocardiograma", '56.72'),
-("E102", "sangue", '24.50'),
-("E103", "urina", '19.90');
+("E101", "ELETROCARDIOGRAMA", '56.72'),
+("E102", "SANGUE", '24.50'),
+("E103", "URINA", '19.90');
 
 INSERT INTO petRemedio (codigo, nome, preco) VALUES
-("R101", "analgesico", '56.72'),
-("R102", "symparic", '24.50'),
-("R103", "probiotico", '19.90');
+("R101", "ANALGÉSICO", '56.72'),
+("R102", "SYMPARIC", '24.50'),
+("R103", "PROBIÓTICO", '19.90');
 
 INSERT INTO petVacina (codigo, nome, preco) VALUES
-("V101", "coronavac", '56.72'),
-("V102", "astrazenica", '24.50'),
-("V103", "pfizer", '19.90');
+("V101", "CORONAVAC", '56.72'),
+("V102", "ASTRAZENICA", '24.50'),
+("V103", "PFIZER", '19.90');
 
 insert into agendamento (data_con, hora_con, codigopet, nomepet, 
 						cpf_crmv, nome_user) values
-						("2021-10-13", "15:30", "C101", "irlandes", "CRMV-SP-5329", "Vivian Andrada"),
-						("2021-10-13", "08:30", "C102", "nina", "CRMV-SP-4432", "Emerson Abreu"),
-						("2021-10-13", "11:30", "C103", "zander", "CRMV-SP-5329", "Vivian Andrada"),
-                        ("2021-12-05", "08:30", "C105", "suzy", "CRMV-SP-4432", "Emerson Abreu"),
-                        ("2021-12-05", "14:00", "C104", "laiska", "CRMV-SP-5329", "Vivian Andrada");
+						("2022-06-28", "15:30", "C101", "WOLFA", "CRMV-SP-5329", "Vivian Andrada"),
+						("2022-06-28", "08:30", "C102", "IRLANDES", "CRMV-SP-4432", "Emerson Abreu");
                         
                         
 insert into Consulta (data_con, hora_con, codigopet, nomepet, cpf_crmv, nome_user, 
-					peso_con, idade_con, obs_con, vacina, remedio, exame) values
-("2021-10-13", "15:30",  "C101", "irlandes", "CRMV-SP-5329", "Vivian Andrada", "12.5", "2", "muita coceira", "pfizer", "symparic", "urina"),
-("2021-10-13", "08:30",  "C102", "nina", "CRMV-SP-4432", "Emerson Abreu", "9", "3", "", "astrazenica", "", "sangue"),
-("2021-10-13", "11:30",  "C103", "zander", "CRMV-SP-5329", "Vivian Andrada", "6.55", "4", "excelente", "", "", ""),
-("2021-12-05", "08:30",  "C105", "suzy", "CRMV-SP-4432", "Emerson Abreu", "1.50", "2", "apresenta apatia", "coronavac", "analgesico", "eletrocardiograma"),
-("2021-12-05", "14:00", "C104", "laiska", "CRMV-SP-5329", "Vivian Andrada", "2.47", "2", "apresenta apatia", "coronavac", "analgesico", "eletrocardiograma");
+					peso_con, idade_con, obs_con, vacina1,vacina2,vacina3, remedio1,remedio2,remedio3, exame1,exame2,exame3) values
+("2021-06-28", "15:30",  "C101", "WOLFA", "CRMV-SP-5329", "Vivian Andrada", "12.5", "2", "muita coceira", "pfizer", "","","symparic", "","","urina","",""),
+("2021-06-28", "08:30",  "C102", "IRLANDES", "CRMV-SP-4432", "Emerson Abreu", "9", "3", "", "astrazenica", "","","symparic", "","","urina","","");
                       
                       
 INSERT INTO Paciente (codigopet, nomepet, raca, idade, peso, sexo, cpfdono, nomedono, rua, numero, cep, cidade, UF, email, telefone) VALUES
-	("C101", "irlandes", "husky", "4", "12,67", "Masculino", "32726305876", "Kazemiro", "alfazema","879","1234562","campinas", "SP", "kaz@gmail.com", "19981777654"),
-	("C102",  "nina", "SRD", "2", "15,00", "Feminino", "67826305876", "Angelica Houston", "bromelias","231","1233456","valinhos", "SP", "an@gmail.com", "19981888990"),
-    ("C103",  "zander", "poodle", "3", "9,65", "Masculino", "67826305876", "Angelica Houston", "bromelias","231","1233456","valinhos", "SP", "an@gmail.com", "19981888990"),
-    ("C104",  "laiska", "york", "1", "2", "Feminino", "54345678941",  "Dorneles Fields", "das correas","77","9876548","vinhedo", "SP", "df@gmail.com", "19981876540"),
-    ("C105",  "suzy", "shitzu", "2", "1,33", "Feminino", "34567890321", "Donita Sparks", "munduruku","13","5436789","cosmopolis", "SP", "sparksdon@gmail.com", "19981843250");
+	("C101", "WOLFA", "HUSKY", "4", "12,67", "Feminino", "32726305876", "Lucas Paduam", "Estrada Velha","879","1234562","Arthur Nogueira", "SP", "lp@gmail.com", "19981777654"),
+	("C102",  "IRLANDES", "SRD", "2", "15,00", "Masculino", "67826305876", "Angelica Spark", "Rua das Bromelias","231","1233456","Valinhos", "SP", "an@gmail.com", "19981888990");
     
     

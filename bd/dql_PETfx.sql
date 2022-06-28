@@ -4,7 +4,6 @@ drop table consulta;
 
 /*CONSULTA SIMPLES*/
 select * from Usuario;
-SELECT nome_user FROM Usuario WHERE tipo_user = "veterinario" ORDER BY nome_user;
 select * from Paciente order by nomepet;
 select * from agendamento;
 select * from Consulta;
@@ -12,15 +11,10 @@ select * from petVacina;
 select * from petExame;
 select * from petRemedio;
 
-
-
 SELECT * FROM agendamento ORDER BY data_con;
 SELECT * FROM agendamento WHERE data_con = curdate() ORDER BY data_con;
 
-insert into agendamento (data_con, hora_con, codigopet, nomepet, 
-						cpf_crmv, nome_user) values
-						("2022-05-01", "15:00", "C103", "zander", "CRMV-SP-5329", "Vivian Andrada");
-
+DELETE FROM Consulta WHERE codigopet = "C101";
 UPDATE agendamento SET codigopet = "C104", nomepet = "Irlandes", cpf_crmv = "CRMV-SP-5329", nome_user = "Vivian Andrada" WHERE data_con = "2021-10-13" AND hora_con = "15:30";
 
 /*Seleciona paciente e vet que realizarão consulta na data informada*/

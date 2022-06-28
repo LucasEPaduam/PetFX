@@ -30,6 +30,7 @@ nome varchar (50)  NOT NULL,
 preco varchar (10) NOT NULL
 );
 
+
 CREATE TABLE IF NOT EXISTS petVacina(
 codigo varchar (4) PRIMARY KEY NOT NULL,
 nome varchar (50)  NOT NULL,
