@@ -1,5 +1,9 @@
 # PetFX
 
+<h1 align="center">
+    <img src="https://github.com/LucasEPaduam/PetFX/blob/master/src/view/IMAGENS/logopata.png" width="100px; "/> 
+</h1>
+
 Software para o gerenciamento de consultas de Pets 
 destinado a veterinários autonômos e clinícas de pequeno porte.
 Realiza o cadastramento de usuários, pacientes e medicamentos. 
@@ -9,9 +13,7 @@ Emite relatórios das consultas realizadas e receita médica da consulta.
 Desenvolvido utilizando JavaFX para interface gráfica, Java para o back-end da aplicação
 e Banco de Dados Relacional MySql. 
  
-<h1 align="center">
-    <img src="https://github.com/LucasEPaduam/PetFX/blob/master/src/view/IMAGENS/logopata.png">
-</h1>
+
 
 ### Indice
 - [Introdução](#-Introdução)
