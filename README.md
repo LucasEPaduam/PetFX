@@ -1,9 +1,9 @@
-# PetFX
-<h1 align="center">
 
-    <img src="https://github.com/LucasEPaduam/PetFX/blob/master/src/view/IMAGENS/logopata.png" width="300px; "/> 
+<h1 align="left">
+    <img src="https://github.com/LucasEPaduam/PetFX/blob/master/src/view/IMAGENS/logopetfx.png" width="300px; "/> 
 </h1>
 
+# PetFX
 Software para o gerenciamento de consultas de Pets 
 destinado a veterinários autonômos e clinícas de pequeno porte.
 Realiza o cadastramento de usuários, pacientes e medicamentos. 
