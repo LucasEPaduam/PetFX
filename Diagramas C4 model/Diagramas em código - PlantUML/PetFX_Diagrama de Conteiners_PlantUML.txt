@@ -1,0 +1,32 @@
+@startuml C4_Elements
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+
+
+!define DEVICONS https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/master/devicons
+!define FONTAWESOME https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/master/font-awesome-5
+!include DEVICONS/java.puml
+!include DEVICONS/mysql.puml
+
+LAYOUT_LEFT_RIGHT()
+
+title Diagrama de Containers
+
+Person(funcionario, "Funcionario", "Pessoa que usa a Aplicação Desktop")
+
+System_Boundary(PetFX, "PetFX") {
+    
+        Container(java_fx,"Interface", "Container: JavaFX", "Interface Gráfica para visualização e manipulação dos dados do sistema.", $sprite="java")
+        Container(java_mvc,"Aplicação", "Container: Java MVC + DAO", "Back-End do sistema.", $sprite="java")        
+        ContainerDb(database, "Database", "MySQL", "Guarda as informações de clientes, usuários, agendamentos, consultas, diagnósticos e receitas.", $sprite="mysql")
+   
+
+    Rel(funcionario, java_fx, "Usa", "Desktop")
+    Rel(java_fx, java_mvc, "Recebe os dados do usuário", "fxml")
+    Rel(java_mvc,database, "Recebe e armazena os dados", "JDBC")
+    Rel(java_fx,funcionario, "Usa", "Desktop")
+    Rel(java_mvc,java_fx, "Recebe os dados solicitados", "fxml")
+    Rel(database,java_mvc, "Recebe solicitação e disponibiliza os dados", "JDBC")
+    
+}
+
+@enduml

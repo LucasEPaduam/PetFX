@@ -1,0 +1,18 @@
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+
+
+AddRelTag("async", $lineStyle = DashedLine())
+
+
+LAYOUT_LEFT_RIGHT()
+
+title Diagrama de Contexto
+
+Person(user,"Administrativo/Veterinario", "Funcionário da cliníca ou Veterinário Autonômo)")
+System(software,"PetFX", "Permite que os funcionários visualizem e manipulem informações referentes aos clientes e seus pets, agendando e realizando consultas, emitindo receitas e armazenando o histórico de evolução e tratamento dos pets.")
+
+Rel(user, software, "Usa interface","JavaFX")
+
+
+@enduml

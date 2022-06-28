@@ -2,6 +2,12 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/Lucas%20Eduardo/Documents/IFSP/CURSO%20TADS/4%20-%20SEMESTRE/PROJETO%20INTERDISCIPLINAR%20IV/PetFX/src/controller/ConsultaController.java</file>
+            <file>file:/C:/Users/Lucas%20Eduardo/Documents/IFSP/CURSO%20TADS/4%20-%20SEMESTRE/PROJETO%20INTERDISCIPLINAR%20IV/PetFX/src/model/Consulta.java</file>
+            <file>file:/C:/Users/Lucas%20Eduardo/Documents/IFSP/CURSO%20TADS/4%20-%20SEMESTRE/PROJETO%20INTERDISCIPLINAR%20IV/PetFX/src/view/Consulta.fxml</file>
+            <file>file:/C:/Users/Lucas%20Eduardo/Documents/IFSP/CURSO%20TADS/4%20-%20SEMESTRE/PROJETO%20INTERDISCIPLINAR%20IV/PetFX/src/dao/ConsultaDao.java</file>
+            <file>file:/C:/Users/Lucas%20Eduardo/Documents/IFSP/CURSO%20TADS/4%20-%20SEMESTRE/PROJETO%20INTERDISCIPLINAR%20IV/PetFX/src/controller/AgendamentoController.java</file>
+        </group>
     </open-files>
 </project-private>

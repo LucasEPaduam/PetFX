@@ -1,0 +1,97 @@
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+!define DEVICONS https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/master/devicons
+!include DEVICONS/java.puml
+!include DEVICONS/mysql.puml
+
+
+
+
+title Diagrama de Componentes
+
+
+Container(interface, "Interface", "JavaFX", $descr="Interface de Acesso dos Funcionários", $sprite="java")
+ContainerDb(database, "Database", "MySQL", "Guarda as informações de clientes, usuários, agendamentos, consultas, diagnósticos e receitas.", $sprite="mysql")
+
+
+Container_Boundary(java_MVC, "Java MVC + DAO") {
+
+    Component(loginController, "Login Controller", "Java MVC Controller", "Recebe credenciais do usuário")    
+    Component(loginDao, "Login Dao", "DAO", "Componente responsavel pelo acesso ao DB para verificação das credenciais")    
+    
+    Rel(interface, loginController, "Usa")
+    Rel(loginController, loginDao, "Usa")    
+    Rel(loginDao, database, "Usa", "JDBC/SQL")
+
+    Component(menuPrincipalController, "Menu Principal Controller", "Java MVC Controller", "Acessa os controllers do sistema")
+    Component(cadUserController, "Cad User Controller", "Java MVC Controller", "Responsável por receber dados dos usuários")
+    Component(alterarSenhaController, "Alerar Senha Controller", "Java MVC Controller", "Responsável por receber nova senha do usuário")
+    Component(userDao, "User Dao", "DAO", "Componente responsavel pelo acesso ao DB referente a dados dos usuários")    
+    
+    Rel(loginController, menuPrincipalController, "Usa")
+    Rel(menuPrincipalController, cadUserController, "Usa")
+    Rel(cadUserController, userDao, "Usa")
+    Rel(cadUserController, alterarSenhaController, "Usa")
+    Rel(alterarSenhaController, userDao, "Usa")   
+    Rel(userDao, database, "Usa", "JDBC/SQL")
+
+    Component(cadPacienteController, "Cad Paciente Controller", "Java MVC Controller", "Responsável por receber dados dos pacientes")
+    Component(pacienteDao, "Paciente Dao", "DAO", "Componente responsavel pelo acesso ao DB referente a dados dos pacientes") 
+
+    Rel(menuPrincipalController, cadPacienteController, "Usa")
+    Rel(cadPacienteController, pacienteDao, "Usa")   
+    Rel(pacienteDao, database, "Usa", "JDBC/SQL")
+
+    Component(cadMedController, "Cad Medicamentos Controller", "Java MVC Controller", "Responsável por receber dados dos medicamentos")
+    Component(remedioDao, "Remédios Dao", "DAO", "Componente responsavel pelo acesso ao DB referente a dados de remédios") 
+    Component(vacinaDao, "Vacinas Dao", "DAO", "Componente responsavel pelo acesso ao DB referente a dados de vacinas") 
+
+    Rel(menuPrincipalController, cadMedController, "Usa")
+    Rel(cadMedController, remedioDao, "Usa")
+    Rel(cadMedController, vacinaDao, "Usa")   
+    Rel(remedioDao, database, "Usa", "JDBC/SQL")
+    Rel(remedioDao, database, "Usa", "JDBC/SQL")
+
+    Component(cadExameController, "Cad Exames Controller", "Java MVC Controller", "Responsável por receber dados dos exames")
+    Component(examesDao, "Exames Dao", "DAO", "Componente responsavel pelo acesso ao DB referente a dados de exames") 
+
+    Rel(menuPrincipalController, cadExameController, "Usa")
+    Rel(cadExameController, examesDao, "Usa")
+    Rel(examesDao, database, "Usa", "JDBC/SQL")
+
+    Component(agendamentoController, "Agendamento Controller", "Java MVC Controller", "Responsável por receber dados dos agendamentos de consultas")
+    Component(agendamentoDao, "Agendamento Dao", "DAO", "Componente responsavel pelo acesso ao DB referente a dados de agendamentos de consultas") 
+
+    Rel(menuPrincipalController, agendamentoController, "Usa")
+    Rel(agendamentoController, agendamentoDao, "Usa")
+    Rel(agendamentoDao, database, "Usa", "JDBC/SQL")
+
+    Component(iniciarConsultaController, "Iniciar Consulta Controller", "Java MVC Controller", "Responsável por receber dados dos agendamentos de consultas")    
+
+    Rel(menuPrincipalController, iniciarConsultaController, "Usa")   
+    Rel(iniciarConsultaController, agendamentoDao,"Solicita os dados de agendamento")
+    Rel(agendamentoDao, database, "Acessa os dados referentes aos agendamentos", "JDBC/SQL")
+    
+    
+    Component(consultaController, "Consulta Controller", "Java MVC Controller", "Recebe os dados das consultas a serem realizadas no dia") 
+    Component(consultaDao, "Consulta Dao", "DAO", "Componente responsavel por salvar no DB os dados referentes as consultas") 
+    Rel(iniciarConsultaController, consultaController, "Usa")   
+    Rel(consultaController, consultaDao,"Usa")
+    Rel(consultaDao, database, "Salva os dados referentes as consultas", "JDBC/SQL")
+
+    Component(relatorioController, "Relatorios Controller", "Java MVC Controller", "Responsável por receber dados das consultas realizadas")
+    
+
+    Rel(menuPrincipalController, relatorioController, "Usa")
+    Rel(relatorioController, consultaDao, "Solicita dados de consultas realizadas")
+    Rel(consultaDao, database, "Acessa os dados referentes as consultas realizadas", "JDBC/SQL")
+
+
+
+      
+}
+
+
+@enduml
+
+
