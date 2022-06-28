@@ -11,17 +11,6 @@ Registra agendamentos, dados de consultas e mantém o histórico de consultas.
 Emite relatórios das consultas realizadas e receita médica da consulta. 
 
 
-### Indice
-- [Objetivo](#-Objetivo)
-- [Tecnologias Utilizadas](#-Tecnologias-Utilizadas)
-- [Colaboradores](#-Colaboradores)
-- [Modelo C4](#-Modelo-C4)
-- [Diagrama de Contexo](#-Diagrama-de-Contexto)
-- [Diagrama de Containers](#-Diagrama-de-Containers)
-- [Diagrama de Componentes](#-Diagrama-de-Componentes)
-
-
-
 ## Objetivo
 > O objetivo principal do PetFX é ser um sistema prático para o gerenciamento de clientes e histórico de consultas 
 realizadas por veterinários autonômos ou clinícas de pequeno porte.
@@ -63,4 +52,3 @@ realizadas por veterinários autonômos ou clinícas de pequeno porte.
 <img src="https://github.com/LucasEPaduam/PetFX/blob/master/Diagramas%20C4%20model/Diagrama%20em%20Imagens/PetFX_Diagrama%20de%20Componentes_PlantUML.png?raw=true">
 
 
-[⬆ Voltar ao topo](#-Indice)
