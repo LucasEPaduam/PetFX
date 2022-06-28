@@ -1,7 +1,7 @@
-
-<h1 align="center">
 # PetFX
-    <img src="https://github.com/LucasEPaduam/PetFX/blob/master/src/view/IMAGENS/logopata.png" width="100px; "/> 
+<h1 align="center">
+
+    <img src="https://github.com/LucasEPaduam/PetFX/blob/master/src/view/IMAGENS/logopata.png" width="300px; "/> 
 </h1>
 
 Software para o gerenciamento de consultas de Pets 
