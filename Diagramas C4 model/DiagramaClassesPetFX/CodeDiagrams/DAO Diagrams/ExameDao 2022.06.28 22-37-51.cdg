@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="ExameDao">
+  <ClassDiagramComponents>
+    <Class name="ExameDao" package="dao" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="con" type="Connection" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getList" returnType="List&lt;Exame&gt;" visibility="public"/>
+        <Method name="insertExame" returnType="boolean" visibility="public">
+          <Argument type="Exame" name="exame"/>
+        </Method>
+        <Method name="updateExame" returnType="boolean" visibility="public">
+          <Argument type="Exame" name="exame"/>
+        </Method>
+        <Method name="deleteExame" returnType="boolean" visibility="public">
+          <Argument type="Exame" name="exame"/>
+        </Method>
+        <Method name="codExame" returnType="String" visibility="public">
+          <Argument type="String" name="codExame"/>
+        </Method>
+        <Method name="pesquisar" returnType="Exame" visibility="public">
+          <Argument type="String" name="codExame"/>
+        </Method>
+        <Method name="getListNomeExames" returnType="List&lt;String&gt;" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="AlterarSenhaController">
+  <ClassDiagramComponents>
+    <Class name="AlterarSenhaController" package="controller" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="btsalvar" type="Button" visibility="private"/>
+        <Field name="tfUserID" type="TextField" visibility="private"/>
+        <Field name="tfSenhaAtual" type="TextField" visibility="private"/>
+        <Field name="tfsenhaNew" type="TextField" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="initialize" returnType="void" visibility="public">
+          <Argument type="URL" name="url"/>
+          <Argument type="ResourceBundle" name="rb"/>
+        </Method>
+        <Method name="salvarNovaSenha" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

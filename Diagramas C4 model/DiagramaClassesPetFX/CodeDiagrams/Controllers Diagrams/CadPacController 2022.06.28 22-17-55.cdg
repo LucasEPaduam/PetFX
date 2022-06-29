@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="CadPacController">
+  <ClassDiagramComponents>
+    <Class name="CadPacController" package="controller" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="btvoltarMenu" type="Button" visibility="private"/>
+        <Field name="lupa" type="ImageView" visibility="private"/>
+        <Field name="rbCachorro" type="RadioButton" visibility="private"/>
+        <Field name="tfcepd" type="TextField" visibility="private"/>
+        <Field name="tfnomepac" type="TextField" visibility="private"/>
+        <Field name="grupo" type="ToggleGroup" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="initialize" returnType="void" visibility="public">
+          <Argument type="URL" name="url"/>
+          <Argument type="ResourceBundle" name="rb"/>
+        </Method>
+        <Method name="Cadastrar" returnType="void" visibility="public"/>
+        <Method name="atualizarPac" returnType="void" visibility="public">
+          <Argument type="Paciente" name="paciente"/>
+        </Method>
+        <Method name="deletePac" returnType="void" visibility="public"/>
+        <Method name="pesquisarPac" returnType="void" visibility="public"/>
+        <Method name="Limpar" returnType="void" visibility="public"/>
+        <Method name="validaCodPet" returnType="boolean" visibility="private"/>
+        <Method name="criarCodPet" returnType="void" visibility="public"/>
+        <Method name="getTextBox" returnType="Paciente" visibility="public"/>
+        <Method name="onActionVoltarMenu" returnType="void" visibility="public"/>
+        <Method name="onActionVisPac" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

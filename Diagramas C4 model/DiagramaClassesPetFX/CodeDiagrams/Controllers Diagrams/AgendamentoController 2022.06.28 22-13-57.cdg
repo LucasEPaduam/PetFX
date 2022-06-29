@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="AgendamentoController">
+  <ClassDiagramComponents>
+    <Class name="AgendamentoController" package="controller" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="btAgendamentos" type="Button" visibility="private"/>
+        <Field name="tfDia" type="TextField" visibility="private"/>
+        <Field name="cbCodigoPet" type="ComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="cbCodigoVet" type="ComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="cbHorario" type="ComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="listaHorarios" type="List&lt;String&gt;" visibility="private" isFinal="true"/>
+        <Field name="obsList" type="ObservableList&lt;String&gt;" visibility="private"/>
+        <Field name="obsListPaciente" type="ObservableList&lt;String&gt;" visibility="private"/>
+        <Field name="obsListVeterinario" type="ObservableList&lt;String&gt;" visibility="private"/>
+        <Field name="tableAgendamentos" type="TableView&lt;Agendamento&gt;" visibility="private"/>
+        <Field name="tColDia" type="TableColumn&lt;Agendamento, String&gt;" visibility="private"/>
+        <Field name="tColHor" type="TableColumn&lt;Agendamento, String&gt;" visibility="private"/>
+        <Field name="tColCodPet" type="TableColumn&lt;Agendamento, String&gt;" visibility="private"/>
+        <Field name="tColNomePet" type="TableColumn&lt;Agendamento, String&gt;" visibility="private"/>
+        <Field name="tColCodVet" type="TableColumn&lt;Agendamento, String&gt;" visibility="private"/>
+        <Field name="tColNomeVet" type="TableColumn&lt;Agendamento, String&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="initialize" returnType="void" visibility="public">
+          <Argument type="URL" name="url"/>
+          <Argument type="ResourceBundle" name="rb"/>
+        </Method>
+        <Method name="iniciarTabela" returnType="void" visibility="public"/>
+        <Method name="atualizaTabela" returnType="ObservableList&lt;Agendamento&gt;" visibility="public"/>
+        <Method name="onActionVoltarMenu" returnType="void" visibility="public"/>
+        <Method name="Agendar" returnType="void" visibility="public"/>
+        <Method name="preencherComboBoxCodPet" returnType="void" visibility="private"/>
+        <Method name="preencherComboBoxNomeVet" returnType="void" visibility="private"/>
+        <Method name="preencherComboBoxHorario" returnType="void" visibility="private"/>
+        <Method name="getAgendamentoTextBox" returnType="Agendamento" visibility="public"/>
+        <Method name="alerta" returnType="Alert" visibility="public">
+          <Argument type="String" name="header"/>
+          <Argument type="String" name="content"/>
+          <Argument type="Alert.AlertType" name="tipo"/>
+        </Method>
+        <Method name="limparAg" returnType="void" visibility="public"/>
+        <Method name="deleteAgendamento" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

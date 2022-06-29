@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="AgendamentoDao">
+  <ClassDiagramComponents>
+    <Class name="AgendamentoDao" package="dao" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="con" type="Connection" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getListAgendamentos" returnType="List&lt;Agendamento&gt;" visibility="public"/>
+        <Method name="insertAgendamento" returnType="boolean" visibility="public">
+          <Argument type="Agendamento" name="agendamento"/>
+        </Method>
+        <Method name="deleteAgendamento" returnType="boolean" visibility="public">
+          <Argument type="Agendamento" name="agendamento"/>
+        </Method>
+        <Method name="getListAgendamentosDia" returnType="List&lt;Agendamento&gt;" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

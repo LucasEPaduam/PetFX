@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Consulta">
+  <ClassDiagramComponents>
+    <Class name="Consulta" package="model" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="dataCon" type="String" visibility="private"/>
+        <Field name="horaCon" type="String" visibility="private"/>
+        <Field name="codigopet" type="String" visibility="private"/>
+        <Field name="nomepet" type="String" visibility="private"/>
+        <Field name="cpfcrmv" type="String" visibility="private"/>
+        <Field name="nomeUser" type="String" visibility="private"/>
+        <Field name="pesoCon" type="String" visibility="private"/>
+        <Field name="idadeCon" type="String" visibility="private"/>
+        <Field name="obsCon" type="String" visibility="private"/>
+        <Field name="vacina1" type="String" visibility="private"/>
+        <Field name="vacina2" type="String" visibility="private"/>
+        <Field name="vacina3" type="String" visibility="private"/>
+        <Field name="remedio1" type="String" visibility="private"/>
+        <Field name="remedio2" type="String" visibility="private"/>
+        <Field name="remedio3" type="String" visibility="private"/>
+        <Field name="exame1" type="String" visibility="private"/>
+        <Field name="exame2" type="String" visibility="private"/>
+        <Field name="exame3" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="dataCon"/>
+          <Argument type="String" name="horaCon"/>
+          <Argument type="String" name="codigopet"/>
+          <Argument type="String" name="nomepet"/>
+          <Argument type="String" name="cpfcrmv"/>
+          <Argument type="String" name="nomeUser"/>
+          <Argument type="String" name="pesoCon"/>
+          <Argument type="String" name="idadeCon"/>
+          <Argument type="String" name="obsCon"/>
+          <Argument type="String" name="vacina1"/>
+          <Argument type="String" name="vacina2"/>
+          <Argument type="String" name="vacina3"/>
+          <Argument type="String" name="remedio1"/>
+          <Argument type="String" name="remedio2"/>
+          <Argument type="String" name="remedio3"/>
+          <Argument type="String" name="exame1"/>
+          <Argument type="String" name="exame2"/>
+          <Argument type="String" name="exame3"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getDataCon" returnType="String" visibility="public"/>
+        <Method name="setDataCon" returnType="void" visibility="public">
+          <Argument type="String" name="dataCon"/>
+        </Method>
+        <Method name="getHoraCon" returnType="String" visibility="public"/>
+        <Method name="setHoraCon" returnType="void" visibility="public">
+          <Argument type="String" name="horaCon"/>
+        </Method>
+        <Method name="getCodigopet" returnType="String" visibility="public"/>
+        <Method name="setCodigopet" returnType="void" visibility="public">
+          <Argument type="String" name="codigopet"/>
+        </Method>
+        <Method name="getNomepet" returnType="String" visibility="public"/>
+        <Method name="setNomepet" returnType="void" visibility="public">
+          <Argument type="String" name="nomepet"/>
+        </Method>
+        <Method name="getCpfcrmv" returnType="String" visibility="public"/>
+        <Method name="setCpfcrmv" returnType="void" visibility="public">
+          <Argument type="String" name="cpfcrmv"/>
+        </Method>
+        <Method name="getNomeUser" returnType="String" visibility="public"/>
+        <Method name="setNomeUser" returnType="void" visibility="public">
+          <Argument type="String" name="nomeUser"/>
+        </Method>
+        <Method name="getPesoCon" returnType="String" visibility="public"/>
+        <Method name="setPesoCon" returnType="void" visibility="public">
+          <Argument type="String" name="pesoCon"/>
+        </Method>
+        <Method name="getIdadeCon" returnType="String" visibility="public"/>
+        <Method name="setIdadeCon" returnType="void" visibility="public">
+          <Argument type="String" name="idadeCon"/>
+        </Method>
+        <Method name="getObsCon" returnType="String" visibility="public"/>
+        <Method name="setObsCon" returnType="void" visibility="public">
+          <Argument type="String" name="obsCon"/>
+        </Method>
+        <Method name="getVacina1" returnType="String" visibility="public"/>
+        <Method name="setVacina1" returnType="void" visibility="public">
+          <Argument type="String" name="vacina1"/>
+        </Method>
+        <Method name="getRemedio1" returnType="String" visibility="public"/>
+        <Method name="setRemedio1" returnType="void" visibility="public">
+          <Argument type="String" name="remedio1"/>
+        </Method>
+        <Method name="getExame1" returnType="String" visibility="public"/>
+        <Method name="setExame1" returnType="void" visibility="public">
+          <Argument type="String" name="exame1"/>
+        </Method>
+        <Method name="getVacina2" returnType="String" visibility="public"/>
+        <Method name="setVacina2" returnType="void" visibility="public">
+          <Argument type="String" name="vacina2"/>
+        </Method>
+        <Method name="getRemedio2" returnType="String" visibility="public"/>
+        <Method name="setRemedio2" returnType="void" visibility="public">
+          <Argument type="String" name="remedio2"/>
+        </Method>
+        <Method name="getExame2" returnType="String" visibility="public"/>
+        <Method name="setExame2" returnType="void" visibility="public">
+          <Argument type="String" name="exame2"/>
+        </Method>
+        <Method name="getVacina3" returnType="String" visibility="public"/>
+        <Method name="setVacina3" returnType="void" visibility="public">
+          <Argument type="String" name="vacina3"/>
+        </Method>
+        <Method name="getRemedio3" returnType="String" visibility="public"/>
+        <Method name="setRemedio3" returnType="void" visibility="public">
+          <Argument type="String" name="remedio3"/>
+        </Method>
+        <Method name="getExame3" returnType="String" visibility="public"/>
+        <Method name="setExame3" returnType="void" visibility="public">
+          <Argument type="String" name="exame3"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

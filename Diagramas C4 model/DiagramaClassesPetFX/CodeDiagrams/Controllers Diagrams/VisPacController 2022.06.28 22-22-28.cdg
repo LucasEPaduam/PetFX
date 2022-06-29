@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="VisPacController">
+  <ClassDiagramComponents>
+    <Class name="VisPacController" package="controller" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="Tabelapaccad" type="TableView&lt;Paciente&gt;" visibility="private"/>
+        <Field name="btvoltarpac" type="Button" visibility="private"/>
+        <Field name="columCod" type="TableColumn&lt;Paciente, String&gt;" visibility="private"/>
+        <Field name="columNome" type="TableColumn&lt;Paciente, String&gt;" visibility="private"/>
+        <Field name="columNomeD" type="TableColumn&lt;Paciente, String&gt;" visibility="private"/>
+        <Field name="columRaca" type="TableColumn&lt;Paciente, String&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="initialize" returnType="void" visibility="public">
+          <Argument type="URL" name="url"/>
+          <Argument type="ResourceBundle" name="rb"/>
+        </Method>
+        <Method name="iniciarTabela" returnType="void" visibility="public"/>
+        <Method name="atualizaTabela" returnType="ObservableList&lt;Paciente&gt;" visibility="public"/>
+        <Method name="onActionVoltarPac" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="VacinaDao">
+  <ClassDiagramComponents>
+    <Class name="VacinaDao" package="dao" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="con" type="Connection" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getListVacina" returnType="List&lt;Vacina&gt;" visibility="public"/>
+        <Method name="insertVacina" returnType="boolean" visibility="public">
+          <Argument type="Vacina" name="vacina"/>
+        </Method>
+        <Method name="updateVacina" returnType="boolean" visibility="public">
+          <Argument type="Vacina" name="vacina"/>
+        </Method>
+        <Method name="deleteVacina" returnType="boolean" visibility="public">
+          <Argument type="Vacina" name="vacina"/>
+        </Method>
+        <Method name="codVacina" returnType="String" visibility="public">
+          <Argument type="String" name="codVacina"/>
+        </Method>
+        <Method name="pesquisar" returnType="Vacina" visibility="public">
+          <Argument type="String" name="codVacina"/>
+        </Method>
+        <Method name="getListNomeVacinas" returnType="List&lt;String&gt;" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

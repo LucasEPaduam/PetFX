@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="CadUserController">
+  <ClassDiagramComponents>
+    <Class name="CadUserController" package="controller" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="btVisuUser" type="Button" visibility="private"/>
+        <Field name="btvoltar" type="Button" visibility="private"/>
+        <Field name="btedit" type="Button" visibility="private"/>
+        <Field name="btexcluir" type="Button" visibility="private"/>
+        <Field name="btlimpar" type="Button" visibility="private"/>
+        <Field name="btnovo" type="Button" visibility="private"/>
+        <Field name="btsalvar" type="Button" visibility="private"/>
+        <Field name="tftipouser" type="TextField" visibility="private"/>
+        <Field name="patavoltar" type="ImageView" visibility="private"/>
+        <Field name="tfCpfCrmv" type="TextField" visibility="private"/>
+        <Field name="tfcep" type="TextField" visibility="private"/>
+        <Field name="tfcidade" type="TextField" visibility="private"/>
+        <Field name="tfemail" type="TextField" visibility="private"/>
+        <Field name="tfnome" type="TextField" visibility="private"/>
+        <Field name="tfnum" type="TextField" visibility="private"/>
+        <Field name="tfpesquisar" type="TextField" visibility="private"/>
+        <Field name="tfrua" type="TextField" visibility="private"/>
+        <Field name="tfsenha" type="TextField" visibility="private"/>
+        <Field name="tftel" type="TextField" visibility="private"/>
+        <Field name="tfuf" type="TextField" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="initialize" returnType="void" visibility="public">
+          <Argument type="URL" name="url"/>
+          <Argument type="ResourceBundle" name="rb"/>
+        </Method>
+        <Method name="onActionVoltarMenu" returnType="void" visibility="public"/>
+        <Method name="CadastrarUser" returnType="void" visibility="public"/>
+        <Method name="UpdateUser" returnType="void" visibility="public"/>
+        <Method name="DeleteUser" returnType="void" visibility="public"/>
+        <Method name="validaCrmv" returnType="boolean" visibility="public"/>
+        <Method name="LimparU" returnType="void" visibility="public"/>
+        <Method name="onActionVisUser" returnType="void" visibility="public"/>
+        <Method name="pesquisarUser" returnType="void" visibility="public"/>
+        <Method name="alterarSenha" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

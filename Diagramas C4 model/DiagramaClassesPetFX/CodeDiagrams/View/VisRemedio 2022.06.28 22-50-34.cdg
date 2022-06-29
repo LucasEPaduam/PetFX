@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="VisRemedio">
+  <ClassDiagramComponents>
+    <Class name="VisRemedio" package="petFX" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="stage" type="Stage" visibility="private" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+        <Method name="start" returnType="void" visibility="public">
+          <Argument type="Stage" name="stage"/>
+        </Method>
+        <Method name="getStage" returnType="Stage" visibility="public" isStatic="true"/>
+        <Method name="setStage" returnType="void" visibility="public" isStatic="true">
+          <Argument type="Stage" name="stage"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

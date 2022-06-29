@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Paciente">
+  <ClassDiagramComponents>
+    <Class name="Paciente" package="model" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="codigopet" type="String" visibility="private"/>
+        <Field name="nomepet" type="String" visibility="private"/>
+        <Field name="raca" type="String" visibility="private"/>
+        <Field name="idade" type="String" visibility="private"/>
+        <Field name="peso" type="String" visibility="private"/>
+        <Field name="sexo" type="String" visibility="private"/>
+        <Field name="cpfdono" type="String" visibility="private"/>
+        <Field name="nomedono" type="String" visibility="private"/>
+        <Field name="rua" type="String" visibility="private"/>
+        <Field name="numero" type="String" visibility="private"/>
+        <Field name="cep" type="String" visibility="private"/>
+        <Field name="cidade" type="String" visibility="private"/>
+        <Field name="UF" type="String" visibility="private"/>
+        <Field name="email" type="String" visibility="private"/>
+        <Field name="telefone" type="String" visibility="private"/>
+        <Field name="pesquisa" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="codigopet"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="String" name="codigopet"/>
+          <Argument type="String" name="nomepet"/>
+          <Argument type="String" name="raca"/>
+          <Argument type="String" name="idade"/>
+          <Argument type="String" name="peso"/>
+          <Argument type="String" name="sexo"/>
+          <Argument type="String" name="cpfdono"/>
+          <Argument type="String" name="nomedono"/>
+          <Argument type="String" name="rua"/>
+          <Argument type="String" name="numero"/>
+          <Argument type="String" name="cep"/>
+          <Argument type="String" name="cidade"/>
+          <Argument type="String" name="UF"/>
+          <Argument type="String" name="email"/>
+          <Argument type="String" name="telefone"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getPesquisa" returnType="String" visibility="public"/>
+        <Method name="setPesquisa" returnType="void" visibility="public">
+          <Argument type="String" name="pesquisa"/>
+        </Method>
+        <Method name="getCodigopet" returnType="String" visibility="public"/>
+        <Method name="setCodigopet" returnType="void" visibility="public">
+          <Argument type="String" name="codigopet"/>
+        </Method>
+        <Method name="getNomepet" returnType="String" visibility="public"/>
+        <Method name="setNomepet" returnType="void" visibility="public">
+          <Argument type="String" name="nomepet"/>
+        </Method>
+        <Method name="getRaca" returnType="String" visibility="public"/>
+        <Method name="setRaca" returnType="void" visibility="public">
+          <Argument type="String" name="raca"/>
+        </Method>
+        <Method name="getIdade" returnType="String" visibility="public"/>
+        <Method name="setIdade" returnType="void" visibility="public">
+          <Argument type="String" name="idade"/>
+        </Method>
+        <Method name="getPeso" returnType="String" visibility="public"/>
+        <Method name="setPeso" returnType="void" visibility="public">
+          <Argument type="String" name="peso"/>
+        </Method>
+        <Method name="getSexo" returnType="String" visibility="public"/>
+        <Method name="setSexo" returnType="void" visibility="public">
+          <Argument type="String" name="sexo"/>
+        </Method>
+        <Method name="getCpfdono" returnType="String" visibility="public"/>
+        <Method name="setCpfdono" returnType="void" visibility="public">
+          <Argument type="String" name="cpfdono"/>
+        </Method>
+        <Method name="getNomedono" returnType="String" visibility="public"/>
+        <Method name="setNomedono" returnType="void" visibility="public">
+          <Argument type="String" name="nomedono"/>
+        </Method>
+        <Method name="getRua" returnType="String" visibility="public"/>
+        <Method name="setRua" returnType="void" visibility="public">
+          <Argument type="String" name="rua"/>
+        </Method>
+        <Method name="getNumero" returnType="String" visibility="public"/>
+        <Method name="setNumero" returnType="void" visibility="public">
+          <Argument type="String" name="numero"/>
+        </Method>
+        <Method name="getCep" returnType="String" visibility="public"/>
+        <Method name="setCep" returnType="void" visibility="public">
+          <Argument type="String" name="cep"/>
+        </Method>
+        <Method name="getCidade" returnType="String" visibility="public"/>
+        <Method name="setCidade" returnType="void" visibility="public">
+          <Argument type="String" name="cidade"/>
+        </Method>
+        <Method name="getUF" returnType="String" visibility="public"/>
+        <Method name="setUF" returnType="void" visibility="public">
+          <Argument type="String" name="UF"/>
+        </Method>
+        <Method name="getEmail" returnType="String" visibility="public"/>
+        <Method name="setEmail" returnType="void" visibility="public">
+          <Argument type="String" name="email"/>
+        </Method>
+        <Method name="getTelefone" returnType="String" visibility="public"/>
+        <Method name="setTelefone" returnType="void" visibility="public">
+          <Argument type="String" name="telefone"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

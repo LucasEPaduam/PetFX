@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="CadMedController">
+  <ClassDiagramComponents>
+    <Class name="CadMedController" package="controller" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="resources" type="ResourceBundle" visibility="private"/>
+        <Field name="location" type="URL" visibility="private"/>
+        <Field name="btEdit" type="Button" visibility="private"/>
+        <Field name="btExcluir" type="Button" visibility="private"/>
+        <Field name="btLimpar" type="Button" visibility="private"/>
+        <Field name="btNovo" type="Button" visibility="private"/>
+        <Field name="btSalvar" type="Button" visibility="private"/>
+        <Field name="btVisuMed" type="Button" visibility="private"/>
+        <Field name="btpesquisarMedicamento" type="Button" visibility="private"/>
+        <Field name="btvoltar" type="Button" visibility="private"/>
+        <Field name="rbRemedio" type="RadioButton" visibility="private"/>
+        <Field name="rbVacina" type="RadioButton" visibility="private"/>
+        <Field name="tfcodigo" type="TextField" visibility="private"/>
+        <Field name="tfnome" type="TextField" visibility="private"/>
+        <Field name="tfpesquisar" type="TextField" visibility="private"/>
+        <Field name="tfpreco" type="TextField" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="initialize" returnType="void" visibility="public">
+          <Argument type="URL" name="url"/>
+          <Argument type="ResourceBundle" name="rb"/>
+        </Method>
+        <Method name="onActionVoltarMenu" returnType="void" visibility="public"/>
+        <Method name="Cadastrar" returnType="void" visibility="public"/>
+        <Method name="updateRemedio" returnType="void" visibility="public"/>
+        <Method name="deleteRemedio" returnType="void" visibility="public"/>
+        <Method name="validaCodRemedio" returnType="boolean" visibility="public"/>
+        <Method name="limpar" returnType="void" visibility="public"/>
+        <Method name="criarCodRemedio" returnType="void" visibility="public"/>
+        <Method name="criarCodVacina" returnType="void" visibility="public"/>
+        <Method name="onActionVisMedicamento" returnType="void" visibility="public"/>
+        <Method name="pesquisarMedicamento" returnType="void" visibility="public"/>
+        <Method name="alerta" returnType="Alert" visibility="public">
+          <Argument type="String" name="titulo"/>
+          <Argument type="String" name="header"/>
+          <Argument type="String" name="content"/>
+          <Argument type="AlertType" name="tipo"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

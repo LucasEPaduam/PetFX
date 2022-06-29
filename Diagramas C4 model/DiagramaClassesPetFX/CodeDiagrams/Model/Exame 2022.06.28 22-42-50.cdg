@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Exame">
+  <ClassDiagramComponents>
+    <Class name="Exame" package="model" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="codigoE" type="String" visibility="private"/>
+        <Field name="nomeE" type="String" visibility="private"/>
+        <Field name="precoE" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="codigoE"/>
+          <Argument type="String" name="nomeE"/>
+          <Argument type="String" name="precoE"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCodigoE" returnType="String" visibility="public"/>
+        <Method name="setCodigoE" returnType="void" visibility="public">
+          <Argument type="String" name="codigoE"/>
+        </Method>
+        <Method name="getNomeE" returnType="String" visibility="public"/>
+        <Method name="setNomeE" returnType="void" visibility="public">
+          <Argument type="String" name="nomeE"/>
+        </Method>
+        <Method name="getPrecoE" returnType="String" visibility="public"/>
+        <Method name="setPrecoE" returnType="void" visibility="public">
+          <Argument type="String" name="precoE"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

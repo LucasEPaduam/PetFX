@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="User">
+  <ClassDiagramComponents>
+    <Class name="User" package="model" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="cpfcrmv" type="String" visibility="private"/>
+        <Field name="nomeuser" type="String" visibility="private"/>
+        <Field name="ruaU" type="String" visibility="private"/>
+        <Field name="numeroU" type="String" visibility="private"/>
+        <Field name="cepU" type="String" visibility="private"/>
+        <Field name="cidadeU" type="String" visibility="private"/>
+        <Field name="UFU" type="String" visibility="private"/>
+        <Field name="tipoUser" type="String" visibility="private"/>
+        <Field name="senha" type="String" visibility="private"/>
+        <Field name="emailU" type="String" visibility="private"/>
+        <Field name="telU" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="cpfcrmv"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="String" name="cpfcrmv"/>
+          <Argument type="String" name="nomeuser"/>
+          <Argument type="String" name="ruaU"/>
+          <Argument type="String" name="numeroU"/>
+          <Argument type="String" name="cepU"/>
+          <Argument type="String" name="cidadeU"/>
+          <Argument type="String" name="UFU"/>
+          <Argument type="String" name="tipoUser"/>
+          <Argument type="String" name="senha"/>
+          <Argument type="String" name="emailU"/>
+          <Argument type="String" name="telU"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getEmailU" returnType="String" visibility="public"/>
+        <Method name="setEmailU" returnType="void" visibility="public">
+          <Argument type="String" name="emailU"/>
+        </Method>
+        <Method name="getTelU" returnType="String" visibility="public"/>
+        <Method name="setTelU" returnType="void" visibility="public">
+          <Argument type="String" name="telU"/>
+        </Method>
+        <Method name="getCpfcrmv" returnType="String" visibility="public"/>
+        <Method name="setCpfcrmv" returnType="void" visibility="public">
+          <Argument type="String" name="cpfcrmv"/>
+        </Method>
+        <Method name="getNomeuser" returnType="String" visibility="public"/>
+        <Method name="setNomeuser" returnType="void" visibility="public">
+          <Argument type="String" name="nomeuser"/>
+        </Method>
+        <Method name="getRuaU" returnType="String" visibility="public"/>
+        <Method name="setRuaU" returnType="void" visibility="public">
+          <Argument type="String" name="ruaU"/>
+        </Method>
+        <Method name="getNumeroU" returnType="String" visibility="public"/>
+        <Method name="setNumeroU" returnType="void" visibility="public">
+          <Argument type="String" name="numeroU"/>
+        </Method>
+        <Method name="getCepU" returnType="String" visibility="public"/>
+        <Method name="setCepU" returnType="void" visibility="public">
+          <Argument type="String" name="cepU"/>
+        </Method>
+        <Method name="getCidadeU" returnType="String" visibility="public"/>
+        <Method name="setCidadeU" returnType="void" visibility="public">
+          <Argument type="String" name="cidadeU"/>
+        </Method>
+        <Method name="getUFU" returnType="String" visibility="public"/>
+        <Method name="setUFU" returnType="void" visibility="public">
+          <Argument type="String" name="UFU"/>
+        </Method>
+        <Method name="getTipoUser" returnType="String" visibility="public"/>
+        <Method name="setTipoUser" returnType="void" visibility="public">
+          <Argument type="String" name="tipoUser"/>
+        </Method>
+        <Method name="getSenha" returnType="String" visibility="public"/>
+        <Method name="setSenha" returnType="void" visibility="public">
+          <Argument type="String" name="senha"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

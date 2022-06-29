@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Agendamento">
+  <ClassDiagramComponents>
+    <Class name="Agendamento" package="model" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="dataCon" type="String" visibility="private"/>
+        <Field name="horaCon" type="String" visibility="private"/>
+        <Field name="codigopet" type="String" visibility="private"/>
+        <Field name="nomepet" type="String" visibility="private"/>
+        <Field name="cpfcrmv" type="String" visibility="private"/>
+        <Field name="nomeUser" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="dataCon"/>
+          <Argument type="String" name="horaCon"/>
+          <Argument type="String" name="codigopet"/>
+          <Argument type="String" name="nomepet"/>
+          <Argument type="String" name="cpfcrmv"/>
+          <Argument type="String" name="nomeUser"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getDataCon" returnType="String" visibility="public"/>
+        <Method name="setDataCon" returnType="void" visibility="public">
+          <Argument type="String" name="dataCon"/>
+        </Method>
+        <Method name="getHoraCon" returnType="String" visibility="public"/>
+        <Method name="setHoraCon" returnType="void" visibility="public">
+          <Argument type="String" name="horaCon"/>
+        </Method>
+        <Method name="getCodigopet" returnType="String" visibility="public"/>
+        <Method name="setCodigopet" returnType="void" visibility="public">
+          <Argument type="String" name="codigopet"/>
+        </Method>
+        <Method name="getNomepet" returnType="String" visibility="public"/>
+        <Method name="setNomepet" returnType="void" visibility="public">
+          <Argument type="String" name="nomepet"/>
+        </Method>
+        <Method name="getCpfcrmv" returnType="String" visibility="public"/>
+        <Method name="setCpfcrmv" returnType="void" visibility="public">
+          <Argument type="String" name="cpfcrmv"/>
+        </Method>
+        <Method name="getNomeUser" returnType="String" visibility="public"/>
+        <Method name="setNomeUser" returnType="void" visibility="public">
+          <Argument type="String" name="nomeUser"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

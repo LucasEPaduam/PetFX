@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Remedio">
+  <ClassDiagramComponents>
+    <Class name="Remedio" package="model" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="codigoR" type="String" visibility="private"/>
+        <Field name="nomeR" type="String" visibility="private"/>
+        <Field name="precoR" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="codigoR"/>
+          <Argument type="String" name="nomeR"/>
+          <Argument type="String" name="precoR"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCodigoR" returnType="String" visibility="public"/>
+        <Method name="setCodigoR" returnType="void" visibility="public">
+          <Argument type="String" name="codigoR"/>
+        </Method>
+        <Method name="getNomeR" returnType="String" visibility="public"/>
+        <Method name="setNomeR" returnType="void" visibility="public">
+          <Argument type="String" name="nomeR"/>
+        </Method>
+        <Method name="getPrecoR" returnType="String" visibility="public"/>
+        <Method name="setPrecoR" returnType="void" visibility="public">
+          <Argument type="String" name="precoR"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

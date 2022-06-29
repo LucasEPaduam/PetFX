@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="UserDao">
+  <ClassDiagramComponents>
+    <Class name="UserDao" package="dao" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="con" type="Connection" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getListU" returnType="List&lt;User&gt;" visibility="public"/>
+        <Method name="insertUser" returnType="boolean" visibility="public">
+          <Argument type="User" name="user"/>
+        </Method>
+        <Method name="updateUser" returnType="boolean" visibility="public">
+          <Argument type="User" name="user"/>
+        </Method>
+        <Method name="deleteUser" returnType="boolean" visibility="public">
+          <Argument type="User" name="user"/>
+        </Method>
+        <Method name="pesquisar" returnType="User" visibility="public">
+          <Argument type="String" name="cpfcrmv"/>
+        </Method>
+        <Method name="codUser" returnType="String" visibility="public">
+          <Argument type="String" name="cpfcrmv"/>
+        </Method>
+        <Method name="alteraSenhaUser" returnType="boolean" visibility="public">
+          <Argument type="String" name="user"/>
+          <Argument type="String" name="novaSenha"/>
+        </Method>
+        <Method name="getListCodUser" returnType="List&lt;String&gt;" visibility="public"/>
+        <Method name="pesquisarCodVet" returnType="String" visibility="public">
+          <Argument type="String" name="nomeVet"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

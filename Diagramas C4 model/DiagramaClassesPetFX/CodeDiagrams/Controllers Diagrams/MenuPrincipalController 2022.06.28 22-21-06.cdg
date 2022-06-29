@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="MenuPrincipalController">
+  <ClassDiagramComponents>
+    <Class name="MenuPrincipalController" package="controller" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="btAgendamento" type="Button" visibility="private"/>
+        <Field name="btConsultas" type="Button" visibility="private"/>
+        <Field name="btExame" type="Button" visibility="private"/>
+        <Field name="btMed" type="Button" visibility="private"/>
+        <Field name="btRelatorios" type="Button" visibility="private"/>
+        <Field name="btUsuario" type="Button" visibility="private"/>
+        <Field name="bt_Paciente" type="Button" visibility="private"/>
+        <Field name="btVoltar" type="Button" visibility="private"/>
+        <Field name="pataVoltaLogin" type="ImageView" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="initialize" returnType="void" visibility="public">
+          <Argument type="URL" name="url"/>
+          <Argument type="ResourceBundle" name="rb"/>
+        </Method>
+        <Method name="VoltarLogin" returnType="void" visibility="public"/>
+        <Method name="onActionUsuario" returnType="void" visibility="public"/>
+        <Method name="onActionPaciente" returnType="void" visibility="public"/>
+        <Method name="onActionExame" returnType="void" visibility="public"/>
+        <Method name="onActionMed" returnType="void" visibility="public"/>
+        <Method name="onActionAgendamento" returnType="void" visibility="public"/>
+        <Method name="onActionConsulta" returnType="void" visibility="public"/>
+        <Method name="onActionRelatorio" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

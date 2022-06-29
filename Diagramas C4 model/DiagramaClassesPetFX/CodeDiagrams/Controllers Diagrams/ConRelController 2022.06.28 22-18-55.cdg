@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="ConRelController">
+  <ClassDiagramComponents>
+    <Class name="ConRelController" package="controller" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="btvoltar" type="Button" visibility="private"/>
+        <Field name="btImprimir" type="Button" visibility="private"/>
+        <Field name="btPesquisar" type="Button" visibility="private"/>
+        <Field name="cbData" type="ComboBox&lt;?&gt;" visibility="private"/>
+        <Field name="cbPET" type="ComboBox&lt;?&gt;" visibility="private"/>
+        <Field name="cbVET" type="ComboBox&lt;?&gt;" visibility="private"/>
+        <Field name="rbData" type="RadioButton" visibility="private"/>
+        <Field name="rbPet" type="RadioButton" visibility="private"/>
+        <Field name="rbVet" type="RadioButton" visibility="private"/>
+        <Field name="tvrelatorios" type="TableView&lt;?&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="initialize" returnType="void" visibility="public">
+          <Argument type="URL" name="url"/>
+          <Argument type="ResourceBundle" name="rb"/>
+        </Method>
+        <Method name="onActionVoltarMenu" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

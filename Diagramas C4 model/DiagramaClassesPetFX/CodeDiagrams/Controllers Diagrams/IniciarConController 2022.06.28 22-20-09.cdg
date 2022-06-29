@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="IniciarConController">
+  <ClassDiagramComponents>
+    <Class name="IniciarConController" package="controller" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="btIniciarConsulta" type="Button" visibility="private"/>
+        <Field name="tvIniciarConsulta" type="TableView&lt;Agendamento&gt;" visibility="private"/>
+        <Field name="columCRMV" type="TableColumn&lt;Agendamento, String&gt;" visibility="private"/>
+        <Field name="columCodPet" type="TableColumn&lt;Agendamento, String&gt;" visibility="private"/>
+        <Field name="columDia" type="TableColumn&lt;Agendamento, String&gt;" visibility="private"/>
+        <Field name="columHorario" type="TableColumn&lt;Agendamento, String&gt;" visibility="private"/>
+        <Field name="columNomePet" type="TableColumn&lt;Agendamento, String&gt;" visibility="private"/>
+        <Field name="columNomeVet" type="TableColumn&lt;Agendamento, String&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="initialize" returnType="void" visibility="public">
+          <Argument type="URL" name="url"/>
+          <Argument type="ResourceBundle" name="rb"/>
+        </Method>
+        <Method name="iniciarTabelaAgendamentoDia" returnType="void" visibility="public"/>
+        <Method name="atualizaTabelaAgendamentosDia" returnType="ObservableList&lt;Agendamento&gt;" visibility="public"/>
+        <Method name="onActionIniciarConsulta" returnType="void" visibility="public"/>
+        <Method name="onActionVoltarMenu" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

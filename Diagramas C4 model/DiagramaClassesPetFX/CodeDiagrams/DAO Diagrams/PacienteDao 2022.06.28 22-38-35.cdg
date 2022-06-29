@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="PacienteDao">
+  <ClassDiagramComponents>
+    <Class name="PacienteDao" package="dao" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="con" type="Connection" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getList" returnType="List&lt;Paciente&gt;" visibility="public"/>
+        <Method name="insertPac" returnType="boolean" visibility="public">
+          <Argument type="Paciente" name="paciente"/>
+        </Method>
+        <Method name="updatePac" returnType="boolean" visibility="public">
+          <Argument type="Paciente" name="paciente"/>
+        </Method>
+        <Method name="deletePac" returnType="boolean" visibility="public">
+          <Argument type="Paciente" name="paciente"/>
+        </Method>
+        <Method name="codPac" returnType="String" visibility="public">
+          <Argument type="String" name="codpet"/>
+        </Method>
+        <Method name="pesquisar" returnType="Paciente" visibility="public">
+          <Argument type="String" name="codpet"/>
+        </Method>
+        <Method name="getListCodPet" returnType="List&lt;String&gt;" visibility="public"/>
+        <Method name="pesquisarNomePet" returnType="String" visibility="public">
+          <Argument type="String" name="codpet"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

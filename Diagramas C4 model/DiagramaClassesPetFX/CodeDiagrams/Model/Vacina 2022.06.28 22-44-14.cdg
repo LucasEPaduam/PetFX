@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Vacina">
+  <ClassDiagramComponents>
+    <Class name="Vacina" package="model" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="codigoV" type="String" visibility="private"/>
+        <Field name="nomeV" type="String" visibility="private"/>
+        <Field name="precoV" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="codigoV"/>
+          <Argument type="String" name="nomeV"/>
+          <Argument type="String" name="precoV"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCodigoV" returnType="String" visibility="public"/>
+        <Method name="setCodigoV" returnType="void" visibility="public">
+          <Argument type="String" name="codigoV"/>
+        </Method>
+        <Method name="getNomeV" returnType="String" visibility="public"/>
+        <Method name="setNomeV" returnType="void" visibility="public">
+          <Argument type="String" name="nomeV"/>
+        </Method>
+        <Method name="getPrecoV" returnType="String" visibility="public"/>
+        <Method name="setPrecoV" returnType="void" visibility="public">
+          <Argument type="String" name="precoV"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

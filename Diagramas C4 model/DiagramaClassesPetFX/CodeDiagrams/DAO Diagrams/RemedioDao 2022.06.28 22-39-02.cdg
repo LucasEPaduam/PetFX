@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="RemedioDao">
+  <ClassDiagramComponents>
+    <Class name="RemedioDao" package="dao" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="con" type="Connection" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getListRemedio" returnType="List&lt;Remedio&gt;" visibility="public"/>
+        <Method name="insertRemedio" returnType="boolean" visibility="public">
+          <Argument type="Remedio" name="remedio"/>
+        </Method>
+        <Method name="updateRemedio" returnType="boolean" visibility="public">
+          <Argument type="Remedio" name="remedio"/>
+        </Method>
+        <Method name="deleteRemedio" returnType="boolean" visibility="public">
+          <Argument type="Remedio" name="remedio"/>
+        </Method>
+        <Method name="codRemedio" returnType="String" visibility="public">
+          <Argument type="String" name="codRemedio"/>
+        </Method>
+        <Method name="pesquisar" returnType="Remedio" visibility="public">
+          <Argument type="String" name="codRemedio"/>
+        </Method>
+        <Method name="getListNomeRemedios" returnType="List&lt;String&gt;" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

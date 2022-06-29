@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="ConsultaController">
+  <ClassDiagramComponents>
+    <Class name="ConsultaController" package="controller" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="agendamento" type="Agendamento" visibility="private"/>
+        <Field name="listaV" type="List&lt;String&gt;" visibility="private" isFinal="true"/>
+        <Field name="listaR" type="List&lt;String&gt;" visibility="private" isFinal="true"/>
+        <Field name="listaE" type="List&lt;String&gt;" visibility="private" isFinal="true"/>
+        <Field name="obsListVacina" type="ObservableList&lt;String&gt;" visibility="private"/>
+        <Field name="obsListRemedio" type="ObservableList&lt;String&gt;" visibility="private"/>
+        <Field name="obsListExame" type="ObservableList&lt;String&gt;" visibility="private"/>
+        <Field name="remedio1" type="String" visibility="private"/>
+        <Field name="vacina1" type="String" visibility="private"/>
+        <Field name="exame1" type="String" visibility="private"/>
+        <Field name="obs" type="String" visibility="private"/>
+        <Field name="paciente" type="PacienteDao" visibility="package"/>
+        <Field name="pac" type="Paciente" visibility="package"/>
+        <Field name="btIniciarConsulta" type="Button" visibility="private"/>
+        <Field name="btAdicionarE" type="Button" visibility="private"/>
+        <Field name="lvVacina" type="ListView&lt;String&gt;" visibility="private"/>
+        <Field name="lvRemedio" type="ListView&lt;String&gt;" visibility="private"/>
+        <Field name="lvExame" type="ListView&lt;String&gt;" visibility="private"/>
+        <Field name="tfCodPet" type="TextField" visibility="private"/>
+        <Field name="cbExames" type="ComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="cbRemedios" type="ComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="cbVacinas" type="ComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="tabelaMedicamentos" type="TableView&lt;String&gt;" visibility="private"/>
+        <Field name="colExame" type="TableColumn&lt;String, String&gt;" visibility="private"/>
+        <Field name="colRemedio" type="TableColumn&lt;String, String&gt;" visibility="private"/>
+        <Field name="colVacina" type="TableColumn&lt;String, String&gt;" visibility="private"/>
+        <Field name="tArea" type="TextArea" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Agendamento" name="agendamento"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="initialize" returnType="void" visibility="public">
+          <Argument type="URL" name="url"/>
+          <Argument type="ResourceBundle" name="rb"/>
+        </Method>
+        <Method name="onActionVoltarIC" returnType="void" visibility="public"/>
+        <Method name="preencherComboBoxCodVacina" returnType="void" visibility="private"/>
+        <Method name="preencherComboBoxCodRemedio" returnType="void" visibility="private"/>
+        <Method name="preencherComboBoxCodExame" returnType="void" visibility="private"/>
+        <Method name="adicionarV" returnType="void" visibility="public"/>
+        <Method name="adicionarR" returnType="void" visibility="public"/>
+        <Method name="adicionarE" returnType="void" visibility="public"/>
+        <Method name="removerV" returnType="void" visibility="public"/>
+        <Method name="removerR" returnType="void" visibility="public"/>
+        <Method name="removerE" returnType="void" visibility="public"/>
+        <Method name="finalizarConsulta" returnType="void" visibility="public"/>
+        <Method name="alerta" returnType="Alert" visibility="public">
+          <Argument type="String" name="header"/>
+          <Argument type="String" name="content"/>
+          <Argument type="Alert.AlertType" name="tipo"/>
+        </Method>
+        <Method name="criarObjetoConsulta" returnType="Consulta" visibility="public"/>
+        <Method name="onActionVoltarMenu" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>
