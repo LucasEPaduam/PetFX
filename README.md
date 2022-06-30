@@ -64,3 +64,5 @@ realizadas por veterinários autonômos ou clinícas de pequeno porte.
 
 ### Diagrama de Classes
 
+<img src="https://github.com/LucasEPaduam/PetFX/blob/master/Diagramas%20C4%20model/DiagramaClassesPetFX/Diagrams%20Images/Diagrama%20de%20Classe%20-%20Geral.png?raw=true">
+
