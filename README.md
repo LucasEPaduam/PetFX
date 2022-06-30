@@ -56,7 +56,7 @@ realizadas por veterinários autonômos ou clinícas de pequeno porte.
 
 ### Diagrama de Containers 
 
-<img src="https://github.com/LucasEPaduam/PetFX/blob/master/Diagramas%20C4%20model/Diagrama%20em%20Imagens/PetFX_Diagrama%20de%20Conteiners_PlantUML.png?raw=true">
+<img src="https://github.com/LucasEPaduam/PetFX/blob/master/Diagramas%20C4%20model/Diagrama%20em%20Imagens/PetFX_Diagrama%20de%20Conteiners_PlantUML.png">
 
 ### Diagrama de Componentes
 
