@@ -8,7 +8,8 @@ Software para o gerenciamento de consultas de Pets
 destinado a veterinários autonômos e clinícas de pequeno porte.
 Realiza o cadastramento de usuários, pacientes e medicamentos. 
 Registra agendamentos, dados de consultas e mantém o histórico de consultas.
-Emite relatórios das consultas realizadas e receita médica da consulta. 
+Emite relatórios das consultas realizadas e receita médica da consulta.
+Para o desenvolvimento foi utilizada arquitetura MVC + DAO. 
 
 ### Indice
 - [Objetivo](#-Objetivo)
