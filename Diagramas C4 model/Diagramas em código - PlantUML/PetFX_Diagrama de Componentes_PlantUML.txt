@@ -9,16 +9,17 @@
 
 title Diagrama de Componentes
 
+Person(user,"Administrativo/Veterinario", "Funcionário da cliníca ou Veterinário Autonômo)")
 
-Container(interface, "Interface", "JavaFX", $descr="Interface de Acesso dos Funcionários", $sprite="java")
 ContainerDb(database, "Database", "MySQL", "Guarda as informações de clientes, usuários, agendamentos, consultas, diagnósticos e receitas.", $sprite="mysql")
 
 
 Container_Boundary(java_MVC, "Java MVC + DAO") {
 
+    Container(interface, "Interface", "JavaFX", $descr="Interface de Acesso dos Funcionários", $sprite="java")
     Component(loginController, "Login Controller", "Java MVC Controller", "Recebe credenciais do usuário")    
     Component(loginDao, "Login Dao", "DAO", "Componente responsavel pelo acesso ao DB para verificação das credenciais")    
-    
+    Rel(user,interface, "Usa")
     Rel(interface, loginController, "Usa")
     Rel(loginController, loginDao, "Usa")    
     Rel(loginDao, database, "Usa", "JDBC/SQL")
