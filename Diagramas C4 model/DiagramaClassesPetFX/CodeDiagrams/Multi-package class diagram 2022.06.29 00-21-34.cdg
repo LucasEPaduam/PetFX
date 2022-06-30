@@ -1,0 +1,1308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Multi-package class diagram">
+  <ClassDiagramComponents>
+    <Class name="AgendamentoController" package="controller" visibility="public" xPosition="2613.0" yPosition="1216.0">
+      <Fields>
+        <Field name="btAgendamentos" type="Button" visibility="private"/>
+        <Field name="tfDia" type="TextField" visibility="private"/>
+        <Field name="cbCodigoPet" type="ComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="cbCodigoVet" type="ComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="cbHorario" type="ComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="listaHorarios" type="List&lt;String&gt;" visibility="private" isFinal="true"/>
+        <Field name="obsList" type="ObservableList&lt;String&gt;" visibility="private"/>
+        <Field name="obsListPaciente" type="ObservableList&lt;String&gt;" visibility="private"/>
+        <Field name="obsListVeterinario" type="ObservableList&lt;String&gt;" visibility="private"/>
+        <Field name="tableAgendamentos" type="TableView&lt;Agendamento&gt;" visibility="private"/>
+        <Field name="tColDia" type="TableColumn&lt;Agendamento, String&gt;" visibility="private"/>
+        <Field name="tColHor" type="TableColumn&lt;Agendamento, String&gt;" visibility="private"/>
+        <Field name="tColCodPet" type="TableColumn&lt;Agendamento, String&gt;" visibility="private"/>
+        <Field name="tColNomePet" type="TableColumn&lt;Agendamento, String&gt;" visibility="private"/>
+        <Field name="tColCodVet" type="TableColumn&lt;Agendamento, String&gt;" visibility="private"/>
+        <Field name="tColNomeVet" type="TableColumn&lt;Agendamento, String&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="initialize" returnType="void" visibility="public">
+          <Argument type="URL" name="url"/>
+          <Argument type="ResourceBundle" name="rb"/>
+        </Method>
+        <Method name="iniciarTabela" returnType="void" visibility="public"/>
+        <Method name="atualizaTabela" returnType="ObservableList&lt;Agendamento&gt;" visibility="public"/>
+        <Method name="onActionVoltarMenu" returnType="void" visibility="public"/>
+        <Method name="Agendar" returnType="void" visibility="public"/>
+        <Method name="preencherComboBoxCodPet" returnType="void" visibility="private"/>
+        <Method name="preencherComboBoxNomeVet" returnType="void" visibility="private"/>
+        <Method name="preencherComboBoxHorario" returnType="void" visibility="private"/>
+        <Method name="getAgendamentoTextBox" returnType="Agendamento" visibility="public"/>
+        <Method name="alerta" returnType="Alert" visibility="public">
+          <Argument type="String" name="header"/>
+          <Argument type="String" name="content"/>
+          <Argument type="Alert.AlertType" name="tipo"/>
+        </Method>
+        <Method name="limparAg" returnType="void" visibility="public"/>
+        <Method name="deleteAgendamento" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="AlterarSenhaController" package="controller" visibility="public" xPosition="13.0" yPosition="780.0">
+      <Fields>
+        <Field name="btsalvar" type="Button" visibility="private"/>
+        <Field name="tfUserID" type="TextField" visibility="private"/>
+        <Field name="tfSenhaAtual" type="TextField" visibility="private"/>
+        <Field name="tfsenhaNew" type="TextField" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="initialize" returnType="void" visibility="public">
+          <Argument type="URL" name="url"/>
+          <Argument type="ResourceBundle" name="rb"/>
+        </Method>
+        <Method name="salvarNovaSenha" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="CadExameController" package="controller" visibility="public" xPosition="974.0" yPosition="715.0">
+      <Fields>
+        <Field name="resources" type="ResourceBundle" visibility="private"/>
+        <Field name="location" type="URL" visibility="private"/>
+        <Field name="btvoltar" type="Button" visibility="private"/>
+        <Field name="btPesquisar" type="Button" visibility="private"/>
+        <Field name="btExcluir" type="Button" visibility="private"/>
+        <Field name="btLimpar" type="Button" visibility="private"/>
+        <Field name="btSalvar" type="Button" visibility="private"/>
+        <Field name="btVisuExame" type="Button" visibility="private"/>
+        <Field name="tfcodigo" type="TextField" visibility="private"/>
+        <Field name="tfnome" type="TextField" visibility="private"/>
+        <Field name="tfpesquisar" type="TextField" visibility="private"/>
+        <Field name="tfpreco" type="TextField" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="initialize" returnType="void" visibility="public">
+          <Argument type="URL" name="url"/>
+          <Argument type="ResourceBundle" name="rb"/>
+        </Method>
+        <Method name="onActionVoltarMenu" returnType="void" visibility="public"/>
+        <Method name="Cadastrar" returnType="void" visibility="public"/>
+        <Method name="updateExame" returnType="void" visibility="public"/>
+        <Method name="deleteExame" returnType="void" visibility="public"/>
+        <Method name="validaCodExame" returnType="boolean" visibility="public"/>
+        <Method name="limpar" returnType="void" visibility="public"/>
+        <Method name="criarCodExame" returnType="void" visibility="public"/>
+        <Method name="onActionVisExame" returnType="void" visibility="public"/>
+        <Method name="pesquisarExame" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="CadMedController" package="controller" visibility="public" xPosition="1278.0" yPosition="679.0">
+      <Fields>
+        <Field name="resources" type="ResourceBundle" visibility="private"/>
+        <Field name="location" type="URL" visibility="private"/>
+        <Field name="btEdit" type="Button" visibility="private"/>
+        <Field name="btExcluir" type="Button" visibility="private"/>
+        <Field name="btLimpar" type="Button" visibility="private"/>
+        <Field name="btNovo" type="Button" visibility="private"/>
+        <Field name="btSalvar" type="Button" visibility="private"/>
+        <Field name="btVisuMed" type="Button" visibility="private"/>
+        <Field name="btpesquisarMedicamento" type="Button" visibility="private"/>
+        <Field name="btvoltar" type="Button" visibility="private"/>
+        <Field name="rbRemedio" type="RadioButton" visibility="private"/>
+        <Field name="rbVacina" type="RadioButton" visibility="private"/>
+        <Field name="tfcodigo" type="TextField" visibility="private"/>
+        <Field name="tfnome" type="TextField" visibility="private"/>
+        <Field name="tfpesquisar" type="TextField" visibility="private"/>
+        <Field name="tfpreco" type="TextField" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="initialize" returnType="void" visibility="public">
+          <Argument type="URL" name="url"/>
+          <Argument type="ResourceBundle" name="rb"/>
+        </Method>
+        <Method name="onActionVoltarMenu" returnType="void" visibility="public"/>
+        <Method name="Cadastrar" returnType="void" visibility="public"/>
+        <Method name="updateRemedio" returnType="void" visibility="public"/>
+        <Method name="deleteRemedio" returnType="void" visibility="public"/>
+        <Method name="validaCodRemedio" returnType="boolean" visibility="public"/>
+        <Method name="limpar" returnType="void" visibility="public"/>
+        <Method name="criarCodRemedio" returnType="void" visibility="public"/>
+        <Method name="criarCodVacina" returnType="void" visibility="public"/>
+        <Method name="onActionVisMedicamento" returnType="void" visibility="public"/>
+        <Method name="pesquisarMedicamento" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="CadPacController" package="controller" visibility="public" xPosition="670.0" yPosition="708.0">
+      <Fields>
+        <Field name="btvoltarMenu" type="Button" visibility="private"/>
+        <Field name="lupa" type="ImageView" visibility="private"/>
+        <Field name="rbCachorro" type="RadioButton" visibility="private"/>
+        <Field name="tfcepd" type="TextField" visibility="private"/>
+        <Field name="tfnomepac" type="TextField" visibility="private"/>
+        <Field name="grupo" type="ToggleGroup" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="initialize" returnType="void" visibility="public">
+          <Argument type="URL" name="url"/>
+          <Argument type="ResourceBundle" name="rb"/>
+        </Method>
+        <Method name="Cadastrar" returnType="void" visibility="public"/>
+        <Method name="atualizarPac" returnType="void" visibility="public">
+          <Argument type="Paciente" name="paciente"/>
+        </Method>
+        <Method name="deletePac" returnType="void" visibility="public"/>
+        <Method name="pesquisarPac" returnType="void" visibility="public"/>
+        <Method name="Limpar" returnType="void" visibility="public"/>
+        <Method name="validaCodPet" returnType="boolean" visibility="private"/>
+        <Method name="criarCodPet" returnType="void" visibility="public"/>
+        <Method name="getTextBox" returnType="Paciente" visibility="public"/>
+        <Method name="onActionVoltarMenu" returnType="void" visibility="public"/>
+        <Method name="onActionVisPac" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="CadUserController" package="controller" visibility="public" xPosition="335.0" yPosition="708.0">
+      <Fields>
+        <Field name="btVisuUser" type="Button" visibility="private"/>
+        <Field name="btvoltar" type="Button" visibility="private"/>
+        <Field name="btedit" type="Button" visibility="private"/>
+        <Field name="btexcluir" type="Button" visibility="private"/>
+        <Field name="btlimpar" type="Button" visibility="private"/>
+        <Field name="btnovo" type="Button" visibility="private"/>
+        <Field name="btsalvar" type="Button" visibility="private"/>
+        <Field name="tftipouser" type="TextField" visibility="private"/>
+        <Field name="patavoltar" type="ImageView" visibility="private"/>
+        <Field name="tfCpfCrmv" type="TextField" visibility="private"/>
+        <Field name="tfcep" type="TextField" visibility="private"/>
+        <Field name="tfcidade" type="TextField" visibility="private"/>
+        <Field name="tfemail" type="TextField" visibility="private"/>
+        <Field name="tfnome" type="TextField" visibility="private"/>
+        <Field name="tfnum" type="TextField" visibility="private"/>
+        <Field name="tfpesquisar" type="TextField" visibility="private"/>
+        <Field name="tfrua" type="TextField" visibility="private"/>
+        <Field name="tfsenha" type="TextField" visibility="private"/>
+        <Field name="tftel" type="TextField" visibility="private"/>
+        <Field name="tfuf" type="TextField" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="initialize" returnType="void" visibility="public">
+          <Argument type="URL" name="url"/>
+          <Argument type="ResourceBundle" name="rb"/>
+        </Method>
+        <Method name="onActionVoltarMenu" returnType="void" visibility="public"/>
+        <Method name="CadastrarUser" returnType="void" visibility="public"/>
+        <Method name="UpdateUser" returnType="void" visibility="public"/>
+        <Method name="DeleteUser" returnType="void" visibility="public"/>
+        <Method name="validaCrmv" returnType="boolean" visibility="public"/>
+        <Method name="LimparU" returnType="void" visibility="public"/>
+        <Method name="onActionVisUser" returnType="void" visibility="public"/>
+        <Method name="pesquisarUser" returnType="void" visibility="public"/>
+        <Method name="alterarSenha" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ConRelController" package="controller" visibility="public" xPosition="3122.0" yPosition="353.0">
+      <Fields>
+        <Field name="btvoltar" type="Button" visibility="private"/>
+        <Field name="btImprimir" type="Button" visibility="private"/>
+        <Field name="btPesquisar" type="Button" visibility="private"/>
+        <Field name="cbData" type="ComboBox&lt;?&gt;" visibility="private"/>
+        <Field name="cbPET" type="ComboBox&lt;?&gt;" visibility="private"/>
+        <Field name="cbVET" type="ComboBox&lt;?&gt;" visibility="private"/>
+        <Field name="rbData" type="RadioButton" visibility="private"/>
+        <Field name="rbPet" type="RadioButton" visibility="private"/>
+        <Field name="rbVet" type="RadioButton" visibility="private"/>
+        <Field name="tvrelatorios" type="TableView&lt;?&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="initialize" returnType="void" visibility="public">
+          <Argument type="URL" name="url"/>
+          <Argument type="ResourceBundle" name="rb"/>
+        </Method>
+        <Method name="onActionVoltarMenu" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ConsultaController" package="controller" visibility="public" xPosition="3109.0" yPosition="2093.0">
+      <Fields>
+        <Field name="agendamento" type="Agendamento" visibility="private"/>
+        <Field name="listaV" type="List&lt;String&gt;" visibility="private" isFinal="true"/>
+        <Field name="listaR" type="List&lt;String&gt;" visibility="private" isFinal="true"/>
+        <Field name="listaE" type="List&lt;String&gt;" visibility="private" isFinal="true"/>
+        <Field name="obsListVacina" type="ObservableList&lt;String&gt;" visibility="private"/>
+        <Field name="obsListRemedio" type="ObservableList&lt;String&gt;" visibility="private"/>
+        <Field name="obsListExame" type="ObservableList&lt;String&gt;" visibility="private"/>
+        <Field name="remedio1" type="String" visibility="private"/>
+        <Field name="vacina1" type="String" visibility="private"/>
+        <Field name="exame1" type="String" visibility="private"/>
+        <Field name="obs" type="String" visibility="private"/>
+        <Field name="paciente" type="PacienteDao" visibility="package"/>
+        <Field name="pac" type="Paciente" visibility="package"/>
+        <Field name="btIniciarConsulta" type="Button" visibility="private"/>
+        <Field name="btAdicionarE" type="Button" visibility="private"/>
+        <Field name="lvVacina" type="ListView&lt;String&gt;" visibility="private"/>
+        <Field name="lvRemedio" type="ListView&lt;String&gt;" visibility="private"/>
+        <Field name="lvExame" type="ListView&lt;String&gt;" visibility="private"/>
+        <Field name="tfCodPet" type="TextField" visibility="private"/>
+        <Field name="cbExames" type="ComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="cbRemedios" type="ComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="cbVacinas" type="ComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="tabelaMedicamentos" type="TableView&lt;String&gt;" visibility="private"/>
+        <Field name="colExame" type="TableColumn&lt;String, String&gt;" visibility="private"/>
+        <Field name="colRemedio" type="TableColumn&lt;String, String&gt;" visibility="private"/>
+        <Field name="colVacina" type="TableColumn&lt;String, String&gt;" visibility="private"/>
+        <Field name="tArea" type="TextArea" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Agendamento" name="agendamento"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="initialize" returnType="void" visibility="public">
+          <Argument type="URL" name="url"/>
+          <Argument type="ResourceBundle" name="rb"/>
+        </Method>
+        <Method name="onActionVoltarIC" returnType="void" visibility="public"/>
+        <Method name="preencherComboBoxCodVacina" returnType="void" visibility="private"/>
+        <Method name="preencherComboBoxCodRemedio" returnType="void" visibility="private"/>
+        <Method name="preencherComboBoxCodExame" returnType="void" visibility="private"/>
+        <Method name="adicionarV" returnType="void" visibility="public"/>
+        <Method name="adicionarR" returnType="void" visibility="public"/>
+        <Method name="adicionarE" returnType="void" visibility="public"/>
+        <Method name="removerV" returnType="void" visibility="public"/>
+        <Method name="removerR" returnType="void" visibility="public"/>
+        <Method name="removerE" returnType="void" visibility="public"/>
+        <Method name="finalizarConsulta" returnType="void" visibility="public"/>
+        <Method name="alerta" returnType="Alert" visibility="public">
+          <Argument type="String" name="header"/>
+          <Argument type="String" name="content"/>
+          <Argument type="Alert.AlertType" name="tipo"/>
+        </Method>
+        <Method name="criarObjetoConsulta" returnType="Consulta" visibility="public"/>
+        <Method name="onActionVoltarMenu" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="IniciarConController" package="controller" visibility="public" xPosition="3068.0" yPosition="1448.0">
+      <Fields>
+        <Field name="btIniciarConsulta" type="Button" visibility="private"/>
+        <Field name="tvIniciarConsulta" type="TableView&lt;Agendamento&gt;" visibility="private"/>
+        <Field name="columCRMV" type="TableColumn&lt;Agendamento, String&gt;" visibility="private"/>
+        <Field name="columCodPet" type="TableColumn&lt;Agendamento, String&gt;" visibility="private"/>
+        <Field name="columDia" type="TableColumn&lt;Agendamento, String&gt;" visibility="private"/>
+        <Field name="columHorario" type="TableColumn&lt;Agendamento, String&gt;" visibility="private"/>
+        <Field name="columNomePet" type="TableColumn&lt;Agendamento, String&gt;" visibility="private"/>
+        <Field name="columNomeVet" type="TableColumn&lt;Agendamento, String&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="initialize" returnType="void" visibility="public">
+          <Argument type="URL" name="url"/>
+          <Argument type="ResourceBundle" name="rb"/>
+        </Method>
+        <Method name="iniciarTabelaAgendamentoDia" returnType="void" visibility="public"/>
+        <Method name="atualizaTabelaAgendamentosDia" returnType="ObservableList&lt;Agendamento&gt;" visibility="public"/>
+        <Method name="onActionIniciarConsulta" returnType="void" visibility="public"/>
+        <Method name="onActionVoltarMenu" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="LoginController" package="controller" visibility="public" xPosition="8.0" yPosition="235.0">
+      <Fields>
+        <Field name="tbLogin" type="TextField" visibility="private"/>
+        <Field name="btEntrar" type="Button" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="initialize" returnType="void" visibility="public">
+          <Argument type="URL" name="url"/>
+          <Argument type="ResourceBundle" name="rb"/>
+        </Method>
+        <Method name="loginOnAction" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="MenuPrincipalController" package="controller" visibility="public" xPosition="924.0" yPosition="26.0">
+      <Fields>
+        <Field name="btAgendamento" type="Button" visibility="private"/>
+        <Field name="btConsultas" type="Button" visibility="private"/>
+        <Field name="btExame" type="Button" visibility="private"/>
+        <Field name="btMed" type="Button" visibility="private"/>
+        <Field name="btRelatorios" type="Button" visibility="private"/>
+        <Field name="btUsuario" type="Button" visibility="private"/>
+        <Field name="bt_Paciente" type="Button" visibility="private"/>
+        <Field name="btVoltar" type="Button" visibility="private"/>
+        <Field name="pataVoltaLogin" type="ImageView" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="initialize" returnType="void" visibility="public">
+          <Argument type="URL" name="url"/>
+          <Argument type="ResourceBundle" name="rb"/>
+        </Method>
+        <Method name="VoltarLogin" returnType="void" visibility="public"/>
+        <Method name="onActionUsuario" returnType="void" visibility="public"/>
+        <Method name="onActionPaciente" returnType="void" visibility="public"/>
+        <Method name="onActionExame" returnType="void" visibility="public"/>
+        <Method name="onActionMed" returnType="void" visibility="public"/>
+        <Method name="onActionAgendamento" returnType="void" visibility="public"/>
+        <Method name="onActionConsulta" returnType="void" visibility="public"/>
+        <Method name="onActionRelatorio" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="VisExameController" package="controller" visibility="public" xPosition="1352.0" yPosition="1554.0">
+      <Fields>
+        <Field name="TabelaCadExame" type="TableView&lt;Exame&gt;" visibility="private"/>
+        <Field name="btvoltarExame" type="Button" visibility="private"/>
+        <Field name="columCodigo" type="TableColumn&lt;Exame, String&gt;" visibility="private"/>
+        <Field name="columNome" type="TableColumn&lt;Exame, String&gt;" visibility="private"/>
+        <Field name="columPreco" type="TableColumn&lt;Exame, String&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="initialize" returnType="void" visibility="public">
+          <Argument type="URL" name="url"/>
+          <Argument type="ResourceBundle" name="rb"/>
+        </Method>
+        <Method name="iniciarTabela" returnType="void" visibility="public"/>
+        <Method name="atualizaTabela" returnType="ObservableList&lt;Exame&gt;" visibility="public"/>
+        <Method name="onActionVoltarExame" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="VisPacController" package="controller" visibility="public" xPosition="913.0" yPosition="1808.0">
+      <Fields>
+        <Field name="Tabelapaccad" type="TableView&lt;Paciente&gt;" visibility="private"/>
+        <Field name="btvoltarpac" type="Button" visibility="private"/>
+        <Field name="columCod" type="TableColumn&lt;Paciente, String&gt;" visibility="private"/>
+        <Field name="columNome" type="TableColumn&lt;Paciente, String&gt;" visibility="private"/>
+        <Field name="columNomeD" type="TableColumn&lt;Paciente, String&gt;" visibility="private"/>
+        <Field name="columRaca" type="TableColumn&lt;Paciente, String&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="initialize" returnType="void" visibility="public">
+          <Argument type="URL" name="url"/>
+          <Argument type="ResourceBundle" name="rb"/>
+        </Method>
+        <Method name="iniciarTabela" returnType="void" visibility="public"/>
+        <Method name="atualizaTabela" returnType="ObservableList&lt;Paciente&gt;" visibility="public"/>
+        <Method name="onActionVoltarPac" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="VisRemedioController" package="controller" visibility="public" xPosition="1653.0" yPosition="1040.0">
+      <Fields>
+        <Field name="TabelaCadRemedio" type="TableView&lt;Remedio&gt;" visibility="private"/>
+        <Field name="btvoltarMedicamentos" type="Button" visibility="private"/>
+        <Field name="columCodigo" type="TableColumn&lt;Remedio, String&gt;" visibility="private"/>
+        <Field name="columNome" type="TableColumn&lt;Remedio, String&gt;" visibility="private"/>
+        <Field name="columPreco" type="TableColumn&lt;Remedio, String&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="initialize" returnType="void" visibility="public">
+          <Argument type="URL" name="url"/>
+          <Argument type="ResourceBundle" name="rb"/>
+        </Method>
+        <Method name="iniciarTabelaR" returnType="void" visibility="public"/>
+        <Method name="atualizaTabelaR" returnType="ObservableList&lt;Remedio&gt;" visibility="public"/>
+        <Method name="onActionVoltarMed" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="VisUserController" package="controller" visibility="public" xPosition="335.0" yPosition="1617.0">
+      <Fields>
+        <Field name="TabelaU" type="TableView&lt;User&gt;" visibility="private"/>
+        <Field name="btvoltarU" type="Button" visibility="private"/>
+        <Field name="columC" type="TableColumn&lt;User, String&gt;" visibility="private"/>
+        <Field name="columFun" type="TableColumn&lt;User, String&gt;" visibility="private"/>
+        <Field name="columNome" type="TableColumn&lt;User, String&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="initialize" returnType="void" visibility="public">
+          <Argument type="URL" name="url"/>
+          <Argument type="ResourceBundle" name="rb"/>
+        </Method>
+        <Method name="iniciarTabelaU" returnType="void" visibility="public"/>
+        <Method name="atualizaTabelaU" returnType="ObservableList&lt;User&gt;" visibility="public"/>
+        <Method name="onActionVoltarU" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="VisVacinaController" package="controller" visibility="public" xPosition="2019.0" yPosition="1040.0">
+      <Fields>
+        <Field name="TabelaCadVacina" type="TableView&lt;Vacina&gt;" visibility="private"/>
+        <Field name="btvoltarMed" type="Button" visibility="private"/>
+        <Field name="columCodigo" type="TableColumn&lt;Vacina, String&gt;" visibility="private"/>
+        <Field name="columNome" type="TableColumn&lt;Vacina, String&gt;" visibility="private"/>
+        <Field name="columPreco" type="TableColumn&lt;Vacina, String&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="initialize" returnType="void" visibility="public">
+          <Argument type="URL" name="url"/>
+          <Argument type="ResourceBundle" name="rb"/>
+        </Method>
+        <Method name="iniciarTabelaV" returnType="void" visibility="public"/>
+        <Method name="atualizaTabelaV" returnType="ObservableList&lt;Vacina&gt;" visibility="public"/>
+        <Method name="onActionVoltarMedicamento" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="AgendamentoDao" package="dao" visibility="public" xPosition="1735.0" yPosition="2363.0">
+      <Fields>
+        <Field name="con" type="Connection" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getListAgendamentos" returnType="List&lt;Agendamento&gt;" visibility="public"/>
+        <Method name="insertAgendamento" returnType="boolean" visibility="public">
+          <Argument type="Agendamento" name="agendamento"/>
+        </Method>
+        <Method name="deleteAgendamento" returnType="boolean" visibility="public">
+          <Argument type="Agendamento" name="agendamento"/>
+        </Method>
+        <Method name="getListAgendamentosDia" returnType="List&lt;Agendamento&gt;" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ConsultaDao" package="dao" visibility="public" xPosition="3217.0" yPosition="3090.0">
+      <Fields>
+        <Field name="con" type="Connection" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="insertConsulta" returnType="boolean" visibility="public">
+          <Argument type="Consulta" name="consulta"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ExameDao" package="dao" visibility="public" xPosition="1318.0" yPosition="1846.0">
+      <Fields>
+        <Field name="con" type="Connection" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getList" returnType="List&lt;Exame&gt;" visibility="public"/>
+        <Method name="insertExame" returnType="boolean" visibility="public">
+          <Argument type="Exame" name="exame"/>
+        </Method>
+        <Method name="updateExame" returnType="boolean" visibility="public">
+          <Argument type="Exame" name="exame"/>
+        </Method>
+        <Method name="deleteExame" returnType="boolean" visibility="public">
+          <Argument type="Exame" name="exame"/>
+        </Method>
+        <Method name="codExame" returnType="String" visibility="public">
+          <Argument type="String" name="codExame"/>
+        </Method>
+        <Method name="pesquisar" returnType="Exame" visibility="public">
+          <Argument type="String" name="codExame"/>
+        </Method>
+        <Method name="getListNomeExames" returnType="List&lt;String&gt;" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="LoginDao" package="dao" visibility="public" xPosition="13.0" yPosition="425.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="login" returnType="String" visibility="public">
+          <Argument type="String" name="usuario"/>
+          <Argument type="String" name="senha"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="PacienteDao" package="dao" visibility="public" xPosition="717.0" yPosition="2221.0">
+      <Fields>
+        <Field name="con" type="Connection" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getList" returnType="List&lt;Paciente&gt;" visibility="public"/>
+        <Method name="insertPac" returnType="boolean" visibility="public">
+          <Argument type="Paciente" name="paciente"/>
+        </Method>
+        <Method name="updatePac" returnType="boolean" visibility="public">
+          <Argument type="Paciente" name="paciente"/>
+        </Method>
+        <Method name="deletePac" returnType="boolean" visibility="public">
+          <Argument type="Paciente" name="paciente"/>
+        </Method>
+        <Method name="codPac" returnType="String" visibility="public">
+          <Argument type="String" name="codpet"/>
+        </Method>
+        <Method name="pesquisar" returnType="Paciente" visibility="public">
+          <Argument type="String" name="codpet"/>
+        </Method>
+        <Method name="getListCodPet" returnType="List&lt;String&gt;" visibility="public"/>
+        <Method name="pesquisarNomePet" returnType="String" visibility="public">
+          <Argument type="String" name="codpet"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="RemedioDao" package="dao" visibility="public" xPosition="1684.0" yPosition="1707.0">
+      <Fields>
+        <Field name="con" type="Connection" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getListRemedio" returnType="List&lt;Remedio&gt;" visibility="public"/>
+        <Method name="insertRemedio" returnType="boolean" visibility="public">
+          <Argument type="Remedio" name="remedio"/>
+        </Method>
+        <Method name="updateRemedio" returnType="boolean" visibility="public">
+          <Argument type="Remedio" name="remedio"/>
+        </Method>
+        <Method name="deleteRemedio" returnType="boolean" visibility="public">
+          <Argument type="Remedio" name="remedio"/>
+        </Method>
+        <Method name="codRemedio" returnType="String" visibility="public">
+          <Argument type="String" name="codRemedio"/>
+        </Method>
+        <Method name="pesquisar" returnType="Remedio" visibility="public">
+          <Argument type="String" name="codRemedio"/>
+        </Method>
+        <Method name="getListNomeRemedios" returnType="List&lt;String&gt;" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="UserDao" package="dao" visibility="public" xPosition="29.0" yPosition="1929.0">
+      <Fields>
+        <Field name="con" type="Connection" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getListU" returnType="List&lt;User&gt;" visibility="public"/>
+        <Method name="insertUser" returnType="boolean" visibility="public">
+          <Argument type="User" name="user"/>
+        </Method>
+        <Method name="updateUser" returnType="boolean" visibility="public">
+          <Argument type="User" name="user"/>
+        </Method>
+        <Method name="deleteUser" returnType="boolean" visibility="public">
+          <Argument type="User" name="user"/>
+        </Method>
+        <Method name="pesquisar" returnType="User" visibility="public">
+          <Argument type="String" name="cpfcrmv"/>
+        </Method>
+        <Method name="codUser" returnType="String" visibility="public">
+          <Argument type="String" name="cpfcrmv"/>
+        </Method>
+        <Method name="alteraSenhaUser" returnType="boolean" visibility="public">
+          <Argument type="String" name="user"/>
+          <Argument type="String" name="novaSenha"/>
+        </Method>
+        <Method name="getListCodUser" returnType="List&lt;String&gt;" visibility="public"/>
+        <Method name="pesquisarCodVet" returnType="String" visibility="public">
+          <Argument type="String" name="nomeVet"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="VacinaDao" package="dao" visibility="public" xPosition="2067.0" yPosition="1707.0">
+      <Fields>
+        <Field name="con" type="Connection" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getListVacina" returnType="List&lt;Vacina&gt;" visibility="public"/>
+        <Method name="insertVacina" returnType="boolean" visibility="public">
+          <Argument type="Vacina" name="vacina"/>
+        </Method>
+        <Method name="updateVacina" returnType="boolean" visibility="public">
+          <Argument type="Vacina" name="vacina"/>
+        </Method>
+        <Method name="deleteVacina" returnType="boolean" visibility="public">
+          <Argument type="Vacina" name="vacina"/>
+        </Method>
+        <Method name="codVacina" returnType="String" visibility="public">
+          <Argument type="String" name="codVacina"/>
+        </Method>
+        <Method name="pesquisar" returnType="Vacina" visibility="public">
+          <Argument type="String" name="codVacina"/>
+        </Method>
+        <Method name="getListNomeVacinas" returnType="List&lt;String&gt;" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Agendamento" package="model" visibility="public" xPosition="2809.0" yPosition="1975.0">
+      <Fields>
+        <Field name="dataCon" type="String" visibility="private"/>
+        <Field name="horaCon" type="String" visibility="private"/>
+        <Field name="codigopet" type="String" visibility="private"/>
+        <Field name="nomepet" type="String" visibility="private"/>
+        <Field name="cpfcrmv" type="String" visibility="private"/>
+        <Field name="nomeUser" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getDataCon" returnType="String" visibility="public"/>
+        <Method name="setDataCon" returnType="void" visibility="public">
+          <Argument type="String" name="dataCon"/>
+        </Method>
+        <Method name="getHoraCon" returnType="String" visibility="public"/>
+        <Method name="setHoraCon" returnType="void" visibility="public">
+          <Argument type="String" name="horaCon"/>
+        </Method>
+        <Method name="getCodigopet" returnType="String" visibility="public"/>
+        <Method name="setCodigopet" returnType="void" visibility="public">
+          <Argument type="String" name="codigopet"/>
+        </Method>
+        <Method name="getNomepet" returnType="String" visibility="public"/>
+        <Method name="setNomepet" returnType="void" visibility="public">
+          <Argument type="String" name="nomepet"/>
+        </Method>
+        <Method name="getCpfcrmv" returnType="String" visibility="public"/>
+        <Method name="setCpfcrmv" returnType="void" visibility="public">
+          <Argument type="String" name="cpfcrmv"/>
+        </Method>
+        <Method name="getNomeUser" returnType="String" visibility="public"/>
+        <Method name="setNomeUser" returnType="void" visibility="public">
+          <Argument type="String" name="nomeUser"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Consulta" package="model" visibility="public" xPosition="2883.0" yPosition="3019.0">
+      <Fields>
+        <Field name="dataCon" type="String" visibility="private"/>
+        <Field name="horaCon" type="String" visibility="private"/>
+        <Field name="codigopet" type="String" visibility="private"/>
+        <Field name="nomepet" type="String" visibility="private"/>
+        <Field name="cpfcrmv" type="String" visibility="private"/>
+        <Field name="nomeUser" type="String" visibility="private"/>
+        <Field name="pesoCon" type="String" visibility="private"/>
+        <Field name="idadeCon" type="String" visibility="private"/>
+        <Field name="obsCon" type="String" visibility="private"/>
+        <Field name="vacina1" type="String" visibility="private"/>
+        <Field name="vacina2" type="String" visibility="private"/>
+        <Field name="vacina3" type="String" visibility="private"/>
+        <Field name="remedio1" type="String" visibility="private"/>
+        <Field name="remedio2" type="String" visibility="private"/>
+        <Field name="remedio3" type="String" visibility="private"/>
+        <Field name="exame1" type="String" visibility="private"/>
+        <Field name="exame2" type="String" visibility="private"/>
+        <Field name="exame3" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getDataCon" returnType="String" visibility="public"/>
+        <Method name="setDataCon" returnType="void" visibility="public">
+          <Argument type="String" name="dataCon"/>
+        </Method>
+        <Method name="getHoraCon" returnType="String" visibility="public"/>
+        <Method name="setHoraCon" returnType="void" visibility="public">
+          <Argument type="String" name="horaCon"/>
+        </Method>
+        <Method name="getCodigopet" returnType="String" visibility="public"/>
+        <Method name="setCodigopet" returnType="void" visibility="public">
+          <Argument type="String" name="codigopet"/>
+        </Method>
+        <Method name="getNomepet" returnType="String" visibility="public"/>
+        <Method name="setNomepet" returnType="void" visibility="public">
+          <Argument type="String" name="nomepet"/>
+        </Method>
+        <Method name="getCpfcrmv" returnType="String" visibility="public"/>
+        <Method name="setCpfcrmv" returnType="void" visibility="public">
+          <Argument type="String" name="cpfcrmv"/>
+        </Method>
+        <Method name="getNomeUser" returnType="String" visibility="public"/>
+        <Method name="setNomeUser" returnType="void" visibility="public">
+          <Argument type="String" name="nomeUser"/>
+        </Method>
+        <Method name="getPesoCon" returnType="String" visibility="public"/>
+        <Method name="setPesoCon" returnType="void" visibility="public">
+          <Argument type="String" name="pesoCon"/>
+        </Method>
+        <Method name="getIdadeCon" returnType="String" visibility="public"/>
+        <Method name="setIdadeCon" returnType="void" visibility="public">
+          <Argument type="String" name="idadeCon"/>
+        </Method>
+        <Method name="getObsCon" returnType="String" visibility="public"/>
+        <Method name="setObsCon" returnType="void" visibility="public">
+          <Argument type="String" name="obsCon"/>
+        </Method>
+        <Method name="getVacina1" returnType="String" visibility="public"/>
+        <Method name="setVacina1" returnType="void" visibility="public">
+          <Argument type="String" name="vacina1"/>
+        </Method>
+        <Method name="getRemedio1" returnType="String" visibility="public"/>
+        <Method name="setRemedio1" returnType="void" visibility="public">
+          <Argument type="String" name="remedio1"/>
+        </Method>
+        <Method name="getExame1" returnType="String" visibility="public"/>
+        <Method name="setExame1" returnType="void" visibility="public">
+          <Argument type="String" name="exame1"/>
+        </Method>
+        <Method name="getVacina2" returnType="String" visibility="public"/>
+        <Method name="setVacina2" returnType="void" visibility="public">
+          <Argument type="String" name="vacina2"/>
+        </Method>
+        <Method name="getRemedio2" returnType="String" visibility="public"/>
+        <Method name="setRemedio2" returnType="void" visibility="public">
+          <Argument type="String" name="remedio2"/>
+        </Method>
+        <Method name="getExame2" returnType="String" visibility="public"/>
+        <Method name="setExame2" returnType="void" visibility="public">
+          <Argument type="String" name="exame2"/>
+        </Method>
+        <Method name="getVacina3" returnType="String" visibility="public"/>
+        <Method name="setVacina3" returnType="void" visibility="public">
+          <Argument type="String" name="vacina3"/>
+        </Method>
+        <Method name="getRemedio3" returnType="String" visibility="public"/>
+        <Method name="setRemedio3" returnType="void" visibility="public">
+          <Argument type="String" name="remedio3"/>
+        </Method>
+        <Method name="getExame3" returnType="String" visibility="public"/>
+        <Method name="setExame3" returnType="void" visibility="public">
+          <Argument type="String" name="exame3"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Exame" package="model" visibility="public" xPosition="979.0" yPosition="1235.0">
+      <Fields>
+        <Field name="codigoE" type="String" visibility="private"/>
+        <Field name="nomeE" type="String" visibility="private"/>
+        <Field name="precoE" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="codigoE"/>
+          <Argument type="String" name="nomeE"/>
+          <Argument type="String" name="precoE"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCodigoE" returnType="String" visibility="public"/>
+        <Method name="setCodigoE" returnType="void" visibility="public">
+          <Argument type="String" name="codigoE"/>
+        </Method>
+        <Method name="getNomeE" returnType="String" visibility="public"/>
+        <Method name="setNomeE" returnType="void" visibility="public">
+          <Argument type="String" name="nomeE"/>
+        </Method>
+        <Method name="getPrecoE" returnType="String" visibility="public"/>
+        <Method name="setPrecoE" returnType="void" visibility="public">
+          <Argument type="String" name="precoE"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Paciente" package="model" visibility="public" xPosition="643.0" yPosition="1135.0">
+      <Fields>
+        <Field name="codigopet" type="String" visibility="private"/>
+        <Field name="nomepet" type="String" visibility="private"/>
+        <Field name="raca" type="String" visibility="private"/>
+        <Field name="idade" type="String" visibility="private"/>
+        <Field name="peso" type="String" visibility="private"/>
+        <Field name="sexo" type="String" visibility="private"/>
+        <Field name="cpfdono" type="String" visibility="private"/>
+        <Field name="nomedono" type="String" visibility="private"/>
+        <Field name="rua" type="String" visibility="private"/>
+        <Field name="numero" type="String" visibility="private"/>
+        <Field name="cep" type="String" visibility="private"/>
+        <Field name="cidade" type="String" visibility="private"/>
+        <Field name="UF" type="String" visibility="private"/>
+        <Field name="email" type="String" visibility="private"/>
+        <Field name="telefone" type="String" visibility="private"/>
+        <Field name="pesquisa" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="codigopet"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getPesquisa" returnType="String" visibility="public"/>
+        <Method name="setPesquisa" returnType="void" visibility="public">
+          <Argument type="String" name="pesquisa"/>
+        </Method>
+        <Method name="getCodigopet" returnType="String" visibility="public"/>
+        <Method name="setCodigopet" returnType="void" visibility="public">
+          <Argument type="String" name="codigopet"/>
+        </Method>
+        <Method name="getNomepet" returnType="String" visibility="public"/>
+        <Method name="setNomepet" returnType="void" visibility="public">
+          <Argument type="String" name="nomepet"/>
+        </Method>
+        <Method name="getRaca" returnType="String" visibility="public"/>
+        <Method name="setRaca" returnType="void" visibility="public">
+          <Argument type="String" name="raca"/>
+        </Method>
+        <Method name="getIdade" returnType="String" visibility="public"/>
+        <Method name="setIdade" returnType="void" visibility="public">
+          <Argument type="String" name="idade"/>
+        </Method>
+        <Method name="getPeso" returnType="String" visibility="public"/>
+        <Method name="setPeso" returnType="void" visibility="public">
+          <Argument type="String" name="peso"/>
+        </Method>
+        <Method name="getSexo" returnType="String" visibility="public"/>
+        <Method name="setSexo" returnType="void" visibility="public">
+          <Argument type="String" name="sexo"/>
+        </Method>
+        <Method name="getCpfdono" returnType="String" visibility="public"/>
+        <Method name="setCpfdono" returnType="void" visibility="public">
+          <Argument type="String" name="cpfdono"/>
+        </Method>
+        <Method name="getNomedono" returnType="String" visibility="public"/>
+        <Method name="setNomedono" returnType="void" visibility="public">
+          <Argument type="String" name="nomedono"/>
+        </Method>
+        <Method name="getRua" returnType="String" visibility="public"/>
+        <Method name="setRua" returnType="void" visibility="public">
+          <Argument type="String" name="rua"/>
+        </Method>
+        <Method name="getNumero" returnType="String" visibility="public"/>
+        <Method name="setNumero" returnType="void" visibility="public">
+          <Argument type="String" name="numero"/>
+        </Method>
+        <Method name="getCep" returnType="String" visibility="public"/>
+        <Method name="setCep" returnType="void" visibility="public">
+          <Argument type="String" name="cep"/>
+        </Method>
+        <Method name="getCidade" returnType="String" visibility="public"/>
+        <Method name="setCidade" returnType="void" visibility="public">
+          <Argument type="String" name="cidade"/>
+        </Method>
+        <Method name="getUF" returnType="String" visibility="public"/>
+        <Method name="setUF" returnType="void" visibility="public">
+          <Argument type="String" name="UF"/>
+        </Method>
+        <Method name="getEmail" returnType="String" visibility="public"/>
+        <Method name="setEmail" returnType="void" visibility="public">
+          <Argument type="String" name="email"/>
+        </Method>
+        <Method name="getTelefone" returnType="String" visibility="public"/>
+        <Method name="setTelefone" returnType="void" visibility="public">
+          <Argument type="String" name="telefone"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Remedio" package="model" visibility="public" xPosition="1746.0" yPosition="1364.0">
+      <Fields>
+        <Field name="codigoR" type="String" visibility="private"/>
+        <Field name="nomeR" type="String" visibility="private"/>
+        <Field name="precoR" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="codigoR"/>
+          <Argument type="String" name="nomeR"/>
+          <Argument type="String" name="precoR"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCodigoR" returnType="String" visibility="public"/>
+        <Method name="setCodigoR" returnType="void" visibility="public">
+          <Argument type="String" name="codigoR"/>
+        </Method>
+        <Method name="getNomeR" returnType="String" visibility="public"/>
+        <Method name="setNomeR" returnType="void" visibility="public">
+          <Argument type="String" name="nomeR"/>
+        </Method>
+        <Method name="getPrecoR" returnType="String" visibility="public"/>
+        <Method name="setPrecoR" returnType="void" visibility="public">
+          <Argument type="String" name="precoR"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="User" package="model" visibility="public" xPosition="44.0" yPosition="1060.0">
+      <Fields>
+        <Field name="cpfcrmv" type="String" visibility="private"/>
+        <Field name="nomeuser" type="String" visibility="private"/>
+        <Field name="ruaU" type="String" visibility="private"/>
+        <Field name="numeroU" type="String" visibility="private"/>
+        <Field name="cepU" type="String" visibility="private"/>
+        <Field name="cidadeU" type="String" visibility="private"/>
+        <Field name="UFU" type="String" visibility="private"/>
+        <Field name="tipoUser" type="String" visibility="private"/>
+        <Field name="senha" type="String" visibility="private"/>
+        <Field name="emailU" type="String" visibility="private"/>
+        <Field name="telU" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="cpfcrmv"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getEmailU" returnType="String" visibility="public"/>
+        <Method name="setEmailU" returnType="void" visibility="public">
+          <Argument type="String" name="emailU"/>
+        </Method>
+        <Method name="getTelU" returnType="String" visibility="public"/>
+        <Method name="setTelU" returnType="void" visibility="public">
+          <Argument type="String" name="telU"/>
+        </Method>
+        <Method name="getCpfcrmv" returnType="String" visibility="public"/>
+        <Method name="setCpfcrmv" returnType="void" visibility="public">
+          <Argument type="String" name="cpfcrmv"/>
+        </Method>
+        <Method name="getNomeuser" returnType="String" visibility="public"/>
+        <Method name="setNomeuser" returnType="void" visibility="public">
+          <Argument type="String" name="nomeuser"/>
+        </Method>
+        <Method name="getRuaU" returnType="String" visibility="public"/>
+        <Method name="setRuaU" returnType="void" visibility="public">
+          <Argument type="String" name="ruaU"/>
+        </Method>
+        <Method name="getNumeroU" returnType="String" visibility="public"/>
+        <Method name="setNumeroU" returnType="void" visibility="public">
+          <Argument type="String" name="numeroU"/>
+        </Method>
+        <Method name="getCepU" returnType="String" visibility="public"/>
+        <Method name="setCepU" returnType="void" visibility="public">
+          <Argument type="String" name="cepU"/>
+        </Method>
+        <Method name="getCidadeU" returnType="String" visibility="public"/>
+        <Method name="setCidadeU" returnType="void" visibility="public">
+          <Argument type="String" name="cidadeU"/>
+        </Method>
+        <Method name="getUFU" returnType="String" visibility="public"/>
+        <Method name="setUFU" returnType="void" visibility="public">
+          <Argument type="String" name="UFU"/>
+        </Method>
+        <Method name="getTipoUser" returnType="String" visibility="public"/>
+        <Method name="setTipoUser" returnType="void" visibility="public">
+          <Argument type="String" name="tipoUser"/>
+        </Method>
+        <Method name="getSenha" returnType="String" visibility="public"/>
+        <Method name="setSenha" returnType="void" visibility="public">
+          <Argument type="String" name="senha"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Vacina" package="model" visibility="public" xPosition="2151.0" yPosition="1361.0">
+      <Fields>
+        <Field name="codigoV" type="String" visibility="private"/>
+        <Field name="nomeV" type="String" visibility="private"/>
+        <Field name="precoV" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="codigoV"/>
+          <Argument type="String" name="nomeV"/>
+          <Argument type="String" name="precoV"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCodigoV" returnType="String" visibility="public"/>
+        <Method name="setCodigoV" returnType="void" visibility="public">
+          <Argument type="String" name="codigoV"/>
+        </Method>
+        <Method name="getNomeV" returnType="String" visibility="public"/>
+        <Method name="setNomeV" returnType="void" visibility="public">
+          <Argument type="String" name="nomeV"/>
+        </Method>
+        <Method name="getPrecoV" returnType="String" visibility="public"/>
+        <Method name="setPrecoV" returnType="void" visibility="public">
+          <Argument type="String" name="precoV"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="AgendamentoTela" package="petFX" visibility="public" isFinal="true" xPosition="2307.0" yPosition="486.0">
+      <Fields>
+        <Field name="stage" type="Stage" visibility="private" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+        <Method name="start" returnType="void" visibility="public">
+          <Argument type="Stage" name="stage"/>
+        </Method>
+        <Method name="getStage" returnType="Stage" visibility="public" isStatic="true"/>
+        <Method name="setStage" returnType="void" visibility="public" isStatic="true">
+          <Argument type="Stage" name="stage"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="AlterarSenha" package="petFX" visibility="public" xPosition="29.0" yPosition="558.0">
+      <Fields>
+        <Field name="stage" type="Stage" visibility="private" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+        <Method name="start" returnType="void" visibility="public">
+          <Argument type="Stage" name="stage"/>
+        </Method>
+        <Method name="getStage" returnType="Stage" visibility="public" isStatic="true"/>
+        <Method name="setStage" returnType="void" visibility="public" isStatic="true">
+          <Argument type="Stage" name="stage"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="CadExames" package="petFX" visibility="public" xPosition="884.0" yPosition="486.0">
+      <Fields>
+        <Field name="stage" type="Stage" visibility="private" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+        <Method name="start" returnType="void" visibility="public">
+          <Argument type="Stage" name="stage"/>
+        </Method>
+        <Method name="getStage" returnType="Stage" visibility="public" isStatic="true"/>
+        <Method name="setStage" returnType="void" visibility="public" isStatic="true">
+          <Argument type="Stage" name="stage"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="CadMed" package="petFX" visibility="public" xPosition="1163.0" yPosition="486.0">
+      <Fields>
+        <Field name="stage" type="Stage" visibility="private" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+        <Method name="start" returnType="void" visibility="public">
+          <Argument type="Stage" name="stage"/>
+        </Method>
+        <Method name="getStage" returnType="Stage" visibility="public" isStatic="true"/>
+        <Method name="setStage" returnType="void" visibility="public" isStatic="true">
+          <Argument type="Stage" name="stage"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="CadPac" package="petFX" visibility="public" xPosition="619.0" yPosition="486.0">
+      <Fields>
+        <Field name="stage" type="Stage" visibility="private" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+        <Method name="start" returnType="void" visibility="public">
+          <Argument type="Stage" name="stage"/>
+        </Method>
+        <Method name="getStage" returnType="Stage" visibility="public" isStatic="true"/>
+        <Method name="setStage" returnType="void" visibility="public" isStatic="true">
+          <Argument type="Stage" name="stage"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="CadUser" package="petFX" visibility="public" xPosition="335.0" yPosition="486.0">
+      <Fields>
+        <Field name="stage" type="Stage" visibility="private" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+        <Method name="start" returnType="void" visibility="public">
+          <Argument type="Stage" name="stage"/>
+        </Method>
+        <Method name="getStage" returnType="Stage" visibility="public" isStatic="true"/>
+        <Method name="setStage" returnType="void" visibility="public" isStatic="true">
+          <Argument type="Stage" name="stage"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ConsultaTela" package="petFX" visibility="public" xPosition="3139.0" yPosition="1846.0">
+      <Fields>
+        <Field name="stage" type="Stage" visibility="private" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+        <Method name="start" returnType="void" visibility="public">
+          <Argument type="Stage" name="stage"/>
+          <Argument type="Agendamento" name="agendamento"/>
+        </Method>
+        <Method name="getStage" returnType="Stage" visibility="public" isStatic="true"/>
+        <Method name="setStage" returnType="void" visibility="public" isStatic="true">
+          <Argument type="Stage" name="stage"/>
+        </Method>
+        <Method name="start" returnType="void" visibility="public">
+          <Argument type="Stage" name="stage"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="iniciarConsulta" package="petFX" visibility="public" xPosition="3162.0" yPosition="1199.0">
+      <Fields>
+        <Field name="stage" type="Stage" visibility="private" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+        <Method name="start" returnType="void" visibility="public">
+          <Argument type="Stage" name="stage"/>
+        </Method>
+        <Method name="getStage" returnType="Stage" visibility="public" isStatic="true"/>
+        <Method name="setStage" returnType="void" visibility="public" isStatic="true">
+          <Argument type="Stage" name="stage"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Main" package="petFX" visibility="public" xPosition="34.0" yPosition="26.0">
+      <Fields>
+        <Field name="stage" type="Stage" visibility="private" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="start" returnType="void" visibility="public">
+          <Argument type="Stage" name="stage"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+        <Method name="getStage" returnType="Stage" visibility="public" isStatic="true"/>
+        <Method name="setStage" returnType="void" visibility="public" isStatic="true">
+          <Argument type="Stage" name="stage"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="MenuPrincipal" package="petFX" visibility="public" xPosition="658.0" yPosition="121.0">
+      <Fields>
+        <Field name="stage" type="Stage" visibility="private" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+        <Method name="start" returnType="void" visibility="public">
+          <Argument type="Stage" name="stage"/>
+        </Method>
+        <Method name="getStage" returnType="Stage" visibility="public" isStatic="true"/>
+        <Method name="setStage" returnType="void" visibility="public" isStatic="true">
+          <Argument type="Stage" name="stage"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Relatorios" package="petFX" visibility="public" xPosition="2713.0" yPosition="90.0">
+      <Fields>
+        <Field name="stage" type="Stage" visibility="private" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+        <Method name="start" returnType="void" visibility="public">
+          <Argument type="Stage" name="stage"/>
+        </Method>
+        <Method name="getStage" returnType="Stage" visibility="public" isStatic="true"/>
+        <Method name="setStage" returnType="void" visibility="public" isStatic="true">
+          <Argument type="Stage" name="stage"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="VisExame" package="petFX" visibility="public" xPosition="1399.0" yPosition="1345.0">
+      <Fields>
+        <Field name="stage" type="Stage" visibility="private" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+        <Method name="start" returnType="void" visibility="public">
+          <Argument type="Stage" name="stage"/>
+        </Method>
+        <Method name="getStage" returnType="Stage" visibility="public" isStatic="true"/>
+        <Method name="setStage" returnType="void" visibility="public" isStatic="true">
+          <Argument type="Stage" name="stage"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="VisPac" package="petFX" visibility="public" xPosition="949.0" yPosition="1592.0">
+      <Fields>
+        <Field name="stage" type="Stage" visibility="private" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+        <Method name="start" returnType="void" visibility="public">
+          <Argument type="Stage" name="stage"/>
+        </Method>
+        <Method name="getStage" returnType="Stage" visibility="public" isStatic="true"/>
+        <Method name="setStage" returnType="void" visibility="public" isStatic="true">
+          <Argument type="Stage" name="stage"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="VisRemedio" package="petFX" visibility="public" xPosition="1628.0" yPosition="822.0">
+      <Fields>
+        <Field name="stage" type="Stage" visibility="private" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+        <Method name="start" returnType="void" visibility="public">
+          <Argument type="Stage" name="stage"/>
+        </Method>
+        <Method name="getStage" returnType="Stage" visibility="public" isStatic="true"/>
+        <Method name="setStage" returnType="void" visibility="public" isStatic="true">
+          <Argument type="Stage" name="stage"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Visuser" package="petFX" visibility="public" xPosition="361.0" yPosition="1421.0">
+      <Fields>
+        <Field name="stage" type="Stage" visibility="private" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+        <Method name="start" returnType="void" visibility="public">
+          <Argument type="Stage" name="stage"/>
+        </Method>
+        <Method name="getStage" returnType="Stage" visibility="public" isStatic="true"/>
+        <Method name="setStage" returnType="void" visibility="public" isStatic="true">
+          <Argument type="Stage" name="stage"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="VisVacina" package="petFX" visibility="public" xPosition="1963.0" yPosition="822.0">
+      <Fields>
+        <Field name="stage" type="Stage" visibility="private" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+        <Method name="start" returnType="void" visibility="public">
+          <Argument type="Stage" name="stage"/>
+        </Method>
+        <Method name="getStage" returnType="Stage" visibility="public" isStatic="true"/>
+        <Method name="setStage" returnType="void" visibility="public" isStatic="true">
+          <Argument type="Stage" name="stage"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

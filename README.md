@@ -10,6 +10,16 @@ Realiza o cadastramento de usuários, pacientes e medicamentos.
 Registra agendamentos, dados de consultas e mantém o histórico de consultas.
 Emite relatórios das consultas realizadas e receita médica da consulta. 
 
+### Indice
+- [Objetivo](#-Objetivo)
+- [Tecnologias Utilizadas](#-Tecnologias-Utilizadas)
+- [Desenvolvedor](#-Desenvolvedor)
+- [Modelo C4](#-Modelo-C4)
+- [Diagrama de Contexo](#-Diagrama-de-Contexto)
+- [Diagrama de Containers](#-Diagrama-de-Containers)
+- [Diagrama de Componentes](#-Diagrama-de-Componentes)
+- [Diagrama de CLasses](#-Diagrama-de-Classes)
+
 
 ## Objetivo
 > O objetivo principal do PetFX é ser um sistema prático para o gerenciamento de clientes e histórico de consultas 
@@ -21,6 +31,7 @@ realizadas por veterinários autonômos ou clinícas de pequeno porte.
 - [JavaFX_SceneBuilder 2.0](https://www.oracle.com/java/technologies/javafxscenebuilder-1x-archive-downloads.html)
 - [MySQL Workbench 8.0](https://www.mysql.com/products/workbench/)
 - [C4 model - PlantUML](https://plantuml.com/)
+- [EasyUML para NetBeans 12](https://drive.google.com/file/d/1HU-hZfW-WPMc8hMc1EgVUvIChsEJV0ot/view)
 
 
 ## Desenvolvedor
@@ -39,7 +50,7 @@ realizadas por veterinários autonômos ou clinícas de pequeno porte.
 
 ## Modelo C4 
 
-### (Diagrama de Contexo)
+### Diagrama de Contexo
 
 <img src="https://github.com/LucasEPaduam/PetFX/blob/master/Diagramas%20C4%20model/Diagrama%20em%20Imagens/PetFX_Diagrama%20de%20Contexto_PlantUML.png?raw=true">
 
@@ -51,4 +62,5 @@ realizadas por veterinários autonômos ou clinícas de pequeno porte.
 
 <img src="https://github.com/LucasEPaduam/PetFX/blob/master/Diagramas%20C4%20model/Diagrama%20em%20Imagens/PetFX_Diagrama%20de%20Componentes_PlantUML.png?raw=true">
 
+### Diagrama de Classes
 
