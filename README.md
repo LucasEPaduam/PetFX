@@ -19,7 +19,7 @@ Para o desenvolvimento foi utilizada arquitetura MVC + DAO.
 - [Diagrama de Contexo](#-Diagrama-de-Contexto)
 - [Diagrama de Containers](#-Diagrama-de-Containers)
 - [Diagrama de Componentes](#-Diagrama-de-Componentes)
-- [Diagrama de CLasses](#-Diagrama-de-Classes)
+
 
 
 ## Objetivo
@@ -63,7 +63,5 @@ realizadas por veterinários autonômos ou clinícas de pequeno porte.
 
 <img src="https://github.com/LucasEPaduam/PetFX/blob/master/Diagramas%20C4%20model/Diagrama%20em%20Imagens/PetFX_Diagrama%20de%20Componentes_PlantUML.png?raw=true">
 
-### Diagrama de Classes
 
-<img src="https://github.com/LucasEPaduam/PetFX/blob/master/Diagramas%20C4%20model/DiagramaClassesPetFX/Diagrams%20Images/Diagrama%20de%20Classe%20-%20Geral.png?raw=true">
 
